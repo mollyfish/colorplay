@@ -16,8 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  
+  <section class="editBlocks">
   <p>chosen color:</p>
   <svg width="20" height="20">
     <rect class="chosenColor" width="20" height="20" fill="#dd0000" stroke-width="1"stroke="rgb(0,0,0)" />
@@ -48,7 +47,7 @@
     </defs>
   </svg>
   <p>available colors:</p>
-  <svg width="400" height="20">
+  <svg width="220" height="20">
     <rect class="colorChoice" x="0" y="0" width="20" height="20" fill="#E8008C" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect class="colorChoice" x="30" y="0" width="20" height="20" fill="#00ff00" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect class="colorChoice" x="60" y="0" width="20" height="20" fill="#0000ff" stroke-width="1" stroke="rgb(0,0,0)" />
@@ -58,21 +57,29 @@
     <rect class="colorChoice" x="180" y="0" width="20" height="20" fill="#E8C800"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
   <p>available patterns:</p>
-  <svg width="400" height="20">
+  <svg width="200" height="20">
     <rect class="colorChoice" x="0" y="0" width="20" height="20" fill="url(#grad1)"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
-  <p>block:</p>
-  <svg width="600" height="200">
-    <rect class="piece" x="0" y="0" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="50" y="0" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="100" y="0" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="0" y="50" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="50" y="50" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="100" y="50" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="0" y="100" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="50" y="100" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
-    <rect class="piece" x="100" y="100" width="50" height="50" stroke="#000" stroke-width="1" fill="#E8C800" />
+  <p>block:</p><button id="clearBlock">clear block</button>
+  <svg class="block">
+    <rect class="piece" x="0" y="0" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="50" y="0" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="100" y="0" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="0" y="50" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="50" y="50" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="100" y="50" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="0" y="100" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="50" y="100" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
+    <rect class="piece" x="100" y="100" width="50" height="50" stroke="#000" stroke-width="1" fill="#fff" />
   </svg>
+  </section>
+  <button id="repeatBlock">repeat block</button>
+  <button id="clearQuilt">clear quilt</button>
+  <section class="displayBlocks">
+    <svg class="quilt" width="800" height="800">
+      
+    </svg>
+  </section>
 
   <script src="app.js"></script>
 </body>
