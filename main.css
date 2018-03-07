@@ -1,13 +1,101 @@
+ul {
+  list-style: none;
+  /*width: 400px;*/
+  /*margin-top: -100px;*/
+  /*margin: 0;*/
+  padding: 0;
+  transform: rotate(-90deg);
+  /*position: relative;*/
+  position: absolute;
+}
+li {
+  /*margin-top: -200px;*/
+  margin: 0;
+  /*padding: 0;*/
+  /*transform: rotate(-90deg);*/
+}
+
+.color-row {
+  position: relative;
+  margin-top: 2em;
+}
+
+.color-row svg {
+  position: absolute;
+}
+
+.row1 li, .row2 li, .row3 li, .row4 li, .row5 li {
+  margin-bottom: 22px;
+}
+
+.row1 {
+  top: 0;
+  left: 0;
+}
+
+.row1 ul {
+  top: -356px;
+  left: 270px;
+}
+
+.row2 {
+  top: 120px;
+  left: 0;
+}
+
+.row2 ul {
+  top: -360px;
+  left: 264px;
+}
+
+.row3 {
+  top: 240px;
+  left: 0;
+}
+
+.row3 ul {
+  top: -364px;
+  left: 260px;
+}
+
+.row4 {
+  top: 360px;
+  left: 0;
+}
+
+.row4 ul {
+  top: -368px;
+  left: 260px;
+}
+
+.row5 {
+  top: 480px;
+  left: 0;
+}
+
+.row5 ul {
+  top: -364px;
+  left: 260px;
+}
+
+
+
 svg {
   display: block;
 }
 .block {
-  height: 550px;
-  width: 550px;
+  height: 400px;
+  width: 500px;
+  margin: 10px;
+}
+.colors {
+  display: block;
+  width: 50%;
+  float: right;
 }
 .editBlocks {
-  float: left;
+  /*float: left;*/
 }
 .displayBlocks {
-  float: right;
+  /*float: right;*/
 }

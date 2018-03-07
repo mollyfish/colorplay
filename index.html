@@ -17,10 +17,12 @@
 </head>
 <body>
   <section class="editBlocks">
-  <p>chosen color:</p>
-  <svg width="20" height="20">
-    <rect class="chosenColor" width="20" height="20" fill="#dd0000" stroke-width="1"stroke="rgb(0,0,0)" />
-    <defs>
+    <p>chosen color: <span class="chosenLabel">Mist</span></p>
+  <svg width="80" height="40">
+    <rect class="chosenColor" width="80" height="40" fill="#fcfbf2" stroke-width="0.1"stroke="rgb(0,0,0)" />
+  <div class="colors">
+  
+    <!-- <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="rgb(255,255,0)" stop-opacity="1" />
         <stop offset="5%" stop-color="rgb(255,0,0)" stop-opacity="1" />
@@ -44,218 +46,478 @@
         <stop offset="95%" stop-color="rgb(255,0,0)" stop-opacity="1" />
         <stop offset="100%" stop-color="rgb(255,255,0)" stop-opacity="1" />
       </linearGradient>
-    </defs>
+    </defs> -->
   </svg>
-  <p>available colors:</p>
-  <svg width="220" height="20">
-    <rect class="colorChoice" x="0" y="0" width="20" height="20" fill="#E8008C" stroke-width="1" stroke="rgb(0,0,0)" />
-    <rect class="colorChoice" x="30" y="0" width="20" height="20" fill="#00ff00" stroke-width="1" stroke="rgb(0,0,0)" />
-    <rect class="colorChoice" x="60" y="0" width="20" height="20" fill="#0000ff" stroke-width="1" stroke="rgb(0,0,0)" />
-    <rect class="colorChoice" x="90" y="0" width="20" height="20" fill="#000000"  stroke-width="1" stroke="rgb(0,0,0)" />
-    <rect class="colorChoice" x="120" y="0" width="20" height="20" fill="#ffffff"  stroke-width="1" stroke="rgb(0,0,0)" />
-    <rect class="colorChoice" x="150" y="0" width="20" height="20" fill="#dd0000"  stroke-width="1" stroke="rgb(0,0,0)" />
-    <rect class="colorChoice" x="180" y="0" width="20" height="20" fill="#E8C800"  stroke-width="1" stroke="rgb(0,0,0)" />
+
+
+<!-- 
+
+colors: 
+4e453a Terra
+394f38 Evergreen
+255f4a Rugby
+017f51 Fern
+7ab87a Garden
+4fbc7e Meadow
+84a265 Olive
+d0e5a6 Citron
+aed9a8 Neon
+b1c887 Sap
+bbc85e Chartreuse
+efca40 Solar
+c59c30 Spark Gold
+fec037 Saffron
+fbee78 Lemon
+
+fab899 Burst
+f6947e Apricot
+f69266 Mango
+f37645 Mesa
+f7951e Orange
+f16035 Kumquat
+f9c3c4 Candy
+f16269 Flamingo
+f05146 Sunset
+ee2736 Autumn
+c1196f Tropical
+983261 Pomegranate
+57382b Chocolate
+663629 Canyon
+6a5141 Oak
+
+937c67 Tweed
+8c5e2a Brown
+ce9c72 Camel
+761532 Cherry
+855853 Clay
+b285a2 Thistle
+a95ea2 Petunia
+906794 Tart
+39536b Cosmic Blue
+2b375b Freedom Blue
+44749f Denim
+035179 Mineral
+204294 Royal
+166ba9 Velvet
+0086ae Seaweed
+
+35a9d1 Reef
+6ba2c1 Cadet
+0e575f Serpent
+007886 Baltic
+709ba1 Malachite
+44816b Jungle
+009e94 Jade
+3abfb1 Macaw
+70c295 Cactus
+6cc8ba Light Jade
+5ac0de Sky
+a1dcf1 Cloud
+a9ddd7 Caribbean Sea
+9baf94 Asparagus
+bda98e Sycamore
+
+cabc95 Salt
+f2ebbf Chamois
+fcfbf2 Mist
+f7edd3 Shell
+aeb7bd Silver
+ccc0b9 Sand Dune
+afa99e Dogwood
+97827d Desert
+a39986 Brass
+8c918f Shadow
+6f7579 Slate gray
+515659 Manatee
+1d1d23 Licorice
+4e2130 Vino
+46332b Chona Brown
+
+-->
+
+
+  <!-- <p>available colors:</p> -->
+  <div class="color-row row1">
+  <ul class="labels">
+    <li>Terra</li>
+    <li>Evergreen</li>
+    <li>Rugby</li>
+    <li>Fern</li>
+    <li>Garden</li>
+    <li>Meadow</li>
+    <li>Olive</li>
+    <li>Citron</li>
+    <li>Neon</li>
+    <li>Sap</li>
+    <li>Chartreuse</li>
+    <li>Solar</li>
+    <li>Spark Gold</li>
+    <li>Saffron</li>
+    <li>Lemon</li>
+  </ul>
+  <svg width="1020" height="40">
+    <rect id="Terra" class="colorChoice" x="0" y="0" width="30" height="30" fill="#4e453a" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Evergreen" class="colorChoice" x="40" y="0" width="30" height="30" fill="#394f38" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Rugby" class="colorChoice" x="80" y="0" width="30" height="30" fill="#255f4a" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Fern" class="colorChoice" x="120" y="0" width="30" height="30" fill="#017f51"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Garden" class="colorChoice" x="160" y="0" width="30" height="30" fill="#7ab87a"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Meadow" class="colorChoice" x="200" y="0" width="30" height="30" fill="#4fbc7e"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Olive" class="colorChoice" x="240" y="0" width="30" height="30" fill="#84a265"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Citron" class="colorChoice" x="280" y="0" width="30" height="30" fill="#d0e5a6" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Neon" class="colorChoice" x="320" y="0" width="30" height="30" fill="#aed9a8" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Sap" class="colorChoice" x="360" y="0" width="30" height="30" fill="#b1c887" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Chartreuse" class="colorChoice" x="400" y="0" width="30" height="30" fill="#bbc85e"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Solar" class="colorChoice" x="440" y="0" width="30" height="30" fill="#efca40"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Spark Gold" class="colorChoice" x="480" y="0" width="30" height="30" fill="#c59c30"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Saffron" class="colorChoice" x="520" y="0" width="30" height="30" fill="#fec037"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Lemon" class="colorChoice" x="560" y="0" width="30" height="30" fill="#fbee78"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
-  <p>available patterns:</p>
+  </div>
+  <div class="color-row row2">
+  <ul class="labels">
+    <li>Burst</li>
+    <li>Apricot</li>
+    <li>Mango</li>
+    <li>Mesa</li>
+    <li>Orange</li>
+    <li>Kumquat</li>
+    <li>Candy</li>
+    <li>Flamingo</li>
+    <li>Sunset</li>
+    <li>Autumn</li>
+    <li>Tropical</li>
+    <li>Pomegranate</li>
+    <li>Chocolate</li>
+    <li>Canyon</li>
+    <li>Oak</li>
+  </ul>
+  <svg width="1020" height="40">
+    <rect id="Burst" class="colorChoice" x="0" y="0" width="30" height="30" fill="#fab899" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Apricot" class="colorChoice" x="40" y="0" width="30" height="30" fill="#f6947e" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Mango" class="colorChoice" x="80" y="0" width="30" height="30" fill="#f69266" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Mesa" class="colorChoice" x="120" y="0" width="30" height="30" fill="#f37645"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Orange" class="colorChoice" x="160" y="0" width="30" height="30" fill="#f7951e"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Kumquat" class="colorChoice" x="200" y="0" width="30" height="30" fill="#f16035"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Candy" class="colorChoice" x="240" y="0" width="30" height="30" fill="#f9c3c4"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Flamingo" class="colorChoice" x="280" y="0" width="30" height="30" fill="#f16269" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Sunset" class="colorChoice" x="320" y="0" width="30" height="30" fill="#f05146" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Autumn" class="colorChoice" x="360" y="0" width="30" height="30" fill="#ee2736" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Tropical" class="colorChoice" x="400" y="0" width="30" height="30" fill="#c1196f"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Pomegranate" class="colorChoice" x="440" y="0" width="30" height="30" fill="#983261"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Chocolate" class="colorChoice" x="480" y="0" width="30" height="30" fill="#57382b"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Canyon" class="colorChoice" x="520" y="0" width="30" height="30" fill="#663629"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Oak" class="colorChoice" x="560" y="0" width="30" height="30" fill="#6a5141"  stroke-width="1" stroke="rgb(0,0,0)" />
+  </svg>
+  </div>
+  <div class="color-row row3">
+  <ul class="labels">
+    <li>Tweed</li>
+    <li>Brown</li>
+    <li>Camel</li>
+    <li>Cherry</li>
+    <li>Clay</li>
+    <li>Thistle</li>
+    <li>Petunia</li>
+    <li>Tart</li>
+    <li>Cosmic Blue</li>
+    <li>Freedom Blue</li>
+    <li>Denim</li>
+    <li>Mineral</li>
+    <li>Royal</li>
+    <li>Velvet</li>
+    <li>Seaweed</li>
+  </ul>
+  <svg width="1020" height="40">
+    <rect id="Tweed" class="colorChoice" x="0" y="0" width="30" height="30" fill="#937c67" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Brown" class="colorChoice" x="40" y="0" width="30" height="30" fill="#8c5e2a" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Camel" class="colorChoice" x="80" y="0" width="30" height="30" fill="#ce9c72" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Cherry" class="colorChoice" x="120" y="0" width="30" height="30" fill="#761532"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Clay" class="colorChoice" x="160" y="0" width="30" height="30" fill="#855853"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Thistle" class="colorChoice" x="200" y="0" width="30" height="30" fill="#b285a2"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Petunia" class="colorChoice" x="240" y="0" width="30" height="30" fill="#a95ea2"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Tart" class="colorChoice" x="280" y="0" width="30" height="30" fill="#906794" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Cosmic Blue" class="colorChoice" x="320" y="0" width="30" height="30" fill="#39536b" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Freedom Blue" class="colorChoice" x="360" y="0" width="30" height="30" fill="#2b375b" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Denim" class="colorChoice" x="400" y="0" width="30" height="30" fill="#44749f"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Mineral" class="colorChoice" x="440" y="0" width="30" height="30" fill="#035179"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Royal" class="colorChoice" x="480" y="0" width="30" height="30" fill="#204294"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Velvet" class="colorChoice" x="520" y="0" width="30" height="30" fill="#166ba9"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Seaweed" class="colorChoice" x="560" y="0" width="30" height="30" fill="#0086ae"  stroke-width="1" stroke="rgb(0,0,0)" />
+  </svg>
+  </div>
+  <div class="color-row row4">
+  <ul class="labels">
+    <li>Reef</li>
+    <li>Cadet</li>
+    <li>Serpent</li>
+    <li>Baltic</li>
+    <li>Malachite</li>
+    <li>Jungle</li>
+    <li>Jade</li>
+    <li>Macaw</li>
+    <li>Cactus</li>
+    <li>Light Jade</li>
+    <li>Sky</li>
+    <li>Cloud</li>
+    <li>Caribbean Sea</li>
+    <li>Asparagus</li>
+    <li>Sycamore</li>
+  </ul>
+  <svg width="1020" height="40">
+    <rect id="Reef" class="colorChoice" x="0" y="0" width="30" height="30" fill="#35a9d1" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Cadet" class="colorChoice" x="40" y="0" width="30" height="30" fill="#6ba2c1" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Serpent" class="colorChoice" x="80" y="0" width="30" height="30" fill="#0e575f" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Baltic" class="colorChoice" x="120" y="0" width="30" height="30" fill="#007886"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Malachite" class="colorChoice" x="160" y="0" width="30" height="30" fill="#709ba1"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Jungle" class="colorChoice" x="200" y="0" width="30" height="30" fill="#44816b"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Jade" class="colorChoice" x="240" y="0" width="30" height="30" fill="#009e94"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Macaw" class="colorChoice" x="280" y="0" width="30" height="30" fill="#3abfb1" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Cactus" class="colorChoice" x="320" y="0" width="30" height="30" fill="#70c295" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Light Jade" class="colorChoice" x="360" y="0" width="30" height="30" fill="#6cc8ba" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Sky" class="colorChoice" x="400" y="0" width="30" height="30" fill="#5ac0de"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Cloud" class="colorChoice" x="440" y="0" width="30" height="30" fill="#a1dcf1"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Caribbean Sea" class="colorChoice" x="480" y="0" width="30" height="30" fill="#a9ddd7"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Asparagus" class="colorChoice" x="520" y="0" width="30" height="30" fill="#9baf94"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Sycamore" class="colorChoice" x="560" y="0" width="30" height="30" fill="#bda98e"  stroke-width="1" stroke="rgb(0,0,0)" />
+  </svg>
+  </div>
+  <div class="color-row row5">
+  <ul class="labels">
+    <li>Salt</li>
+    <li>Chamois</li>
+    <li>Mist</li>
+    <li>Shell</li>
+    <li>Silver</li>
+    <li>Sand Dune</li>
+    <li>Dogwood</li>
+    <li>Desert</li>
+    <li>Brass</li>
+    <li>Shadow</li>
+    <li>Slate gray</li>
+    <li>Manatee</li>
+    <li>Licorice</li>
+    <li>Vino</li>
+    <li>Chona Brown</li>
+  </ul>
+  <svg width="1020" height="40">
+    <rect id="Salt" class="colorChoice" x="0" y="0" width="30" height="30" fill="#cabc95" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Chamois" class="colorChoice" x="40" y="0" width="30" height="30" fill="#f2ebbf" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Mist" class="colorChoice" x="80" y="0" width="30" height="30" fill="#fcfbf2" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Shell" class="colorChoice" x="120" y="0" width="30" height="30" fill="#f7edd3"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Silver" class="colorChoice" x="160" y="0" width="30" height="30" fill="#aeb7bd"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Sand Dune" class="colorChoice" x="200" y="0" width="30" height="30" fill="#ccc0b9"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Dogwood" class="colorChoice" x="240" y="0" width="30" height="30" fill="#afa99e"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Desert" class="colorChoice" x="280" y="0" width="30" height="30" fill="#97827d" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Brass" class="colorChoice" x="320" y="0" width="30" height="30" fill="#a39986" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Shadow" class="colorChoice" x="360" y="0" width="30" height="30" fill="#8c918f" stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Slate gray" class="colorChoice" x="400" y="0" width="30" height="30" fill="#6f7579"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Manatee" class="colorChoice" x="440" y="0" width="30" height="30" fill="#515659"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Licorice" class="colorChoice" x="480" y="0" width="30" height="30" fill="#1d1d23"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Vino" class="colorChoice" x="520" y="0" width="30" height="30" fill="#4e2130"  stroke-width="1" stroke="rgb(0,0,0)" />
+    <rect id="Chona Brown" class="colorChoice" x="560" y="0" width="30" height="30" fill="#46332b"  stroke-width="1" stroke="rgb(0,0,0)" />
+  </svg>
+  </div>
+  </div>
+<!--   <p>available patterns:</p>
   <svg width="200" height="20">
     <rect class="colorChoice" x="0" y="0" width="20" height="20" fill="url(#grad1)"  stroke-width="1" stroke="rgb(0,0,0)" />
-  </svg>
-  <p>block:</p><button id="clearBlock">clear block</button>
+  </svg> -->
+  <p>block:</p><button id="clearBlock">clear all</button>
   <svg class="block">
     <!-- ROW ONE UPPER -->
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,0 100,0 50,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,0 150,0 100,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,0 200,0 150,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,0 250,0 200,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,0 300,0 300,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,0 350,0 350,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,0 400,0 400,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,0 450,0 450,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,0 500,0 500,50" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,0 100,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,0 150,0 100,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,0 200,0 150,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,0 250,0 200,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,0 300,0 300,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,0 350,0 350,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,0 400,0 400,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,0 450,0 450,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,0 500,0 500,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW ONE LOWER -->
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,0 100,50 50,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,0 150,50 100,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,0 200,50 150,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,0 250,50 200,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,0 300,50 250,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,0 350,50 300,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,0 400,50 350,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,0 450,50 400,50" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,0 500,50 450,50" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,0 100,50 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,0 150,50 100,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,0 200,50 150,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,0 250,50 200,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,0 300,50 250,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,0 350,50 300,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,0 400,50 350,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,0 450,50 400,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,0 500,50 450,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
     <!-- ROW TWO UPPER -->
-    <polygon class="piece" points="0,50 50,50 0,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,50 100,50 50,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,50 150,50 100,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,50 200,50 150,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,50 250,50 200,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,50 300,50 300,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,50 350,50 350,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,50 400,50 400,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,50 450,50 450,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,50 500,50 500,100" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,50 50,50 0,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,50 100,50 50,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,50 150,50 100,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,50 200,50 150,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,50 250,50 200,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,50 300,50 300,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,50 350,50 350,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,50 400,50 400,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,50 450,50 450,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,50 500,50 500,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW TWO LOWER -->
-    <polygon class="piece" points="50,50 50,100 0,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,50 100,100 50,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,50 150,100 100,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,50 200,100 150,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,50 250,100 200,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,50 300,100 250,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,50 350,100 300,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,50 400,100 350,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,50 450,100 400,100" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,50 500,100 450,100" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="50,50 50,100 0,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,50 100,100 50,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,50 150,100 100,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,50 200,100 150,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,50 250,100 200,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,50 300,100 250,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,50 350,100 300,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,50 400,100 350,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,50 450,100 400,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,50 500,100 450,100" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
     <!-- ROW THREE UPPER -->
-    <polygon class="piece" points="0,100 50,100 0,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,100 100,100 50,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,100 150,100 100,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,100 200,100 150,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,100 250,100 200,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,100 300,100 300,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,100 350,100 350,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,100 400,100 400,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,100 450,100 450,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,100 500,100 500,150" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,100 50,100 0,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,100 100,100 50,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,100 150,100 100,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,100 200,100 150,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,100 250,100 200,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,100 300,100 300,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,100 350,100 350,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,100 400,100 400,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,100 450,100 450,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,100 500,100 500,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW THREE LOWER -->
-    <polygon class="piece" points="50,100 50,150 0,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,100 100,150 50,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,100 150,150 100,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,100 200,150 150,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,100 250,150 200,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,100 300,150 250,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,100 350,150 300,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,100 400,150 350,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,100 450,150 400,150" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,100 500,150 450,150" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="50,100 50,150 0,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,100 100,150 50,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,100 150,150 100,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,100 200,150 150,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,100 250,150 200,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,100 300,150 250,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,100 350,150 300,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,100 400,150 350,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,100 450,150 400,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,100 500,150 450,150" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
     <!-- ROW FOUR UPPER -->
-    <polygon class="piece" points="0,150 50,150 0,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,150 100,150 50,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,150 150,150 100,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,150 200,150 150,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,150 250,150 200,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,150 300,150 300,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,150 350,150 350,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,150 400,150 400,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,150 450,150 450,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,150 500,150 500,200" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,150 50,150 0,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,150 100,150 50,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,150 150,150 100,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,150 200,150 150,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,150 250,150 200,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,150 300,150 300,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,150 350,150 350,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,150 400,150 400,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,150 450,150 450,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,150 500,150 500,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW FOUR LOWER -->
-    <polygon class="piece" points="50,150 50,200 0,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,150 100,200 50,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,150 150,200 100,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,150 200,200 150,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,150 250,200 200,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,150 300,200 250,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,150 350,200 300,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,150 400,200 350,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,150 450,200 400,200" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,150 500,200 450,200" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="50,150 50,200 0,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,150 100,200 50,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,150 150,200 100,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,150 200,200 150,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,150 250,200 200,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,150 300,200 250,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,150 350,200 300,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,150 400,200 350,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,150 450,200 400,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,150 500,200 450,200" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
     <!-- ROW FIVE UPPER -->
-    <polygon class="piece" points="0,200 50,200 50,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,200 100,200 100,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,200 150,200 150,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,200 200,200 200,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,200 250,200 250,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,200 300,200 250,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,200 350,200 300,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,200 400,200 350,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,200 450,200 400,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,200 500,200 450,250" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,200 50,200 50,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,200 100,200 100,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,200 150,200 150,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,200 200,200 200,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,200 250,200 250,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,200 300,200 250,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,200 350,200 300,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,200 400,200 350,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,200 450,200 400,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,200 500,200 450,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW FIVE LOWER -->
-    <polygon class="piece" points="0,200 50,250 0,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,200 100,250 50,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,200 150,250 100,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,200 200,250 150,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,200 250,250 200,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,200 300,250 250,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,200 350,250 300,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,200 400,250 350,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,200 450,250 400,250" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="500,200 500,250 450,250" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,200 50,250 0,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,200 100,250 50,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,200 150,250 100,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,200 200,250 150,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,200 250,250 200,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,200 300,250 250,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,200 350,250 300,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,200 400,250 350,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,200 450,250 400,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="500,200 500,250 450,250" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
     <!-- ROW SIX UPPER -->
-    <polygon class="piece" points="0,250 50,250 50,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,250 100,250 100,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,250 150,250 150,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,250 200,250 200,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,250 250,250 250,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,250 300,250 250,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,250 350,250 300,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,250 400,250 350,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,250 450,250 400,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,250 500,250 450,300" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,250 50,250 50,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,250 100,250 100,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,250 150,250 150,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,250 200,250 200,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,250 250,250 250,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,250 300,250 250,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,250 350,250 300,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,250 400,250 350,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,250 450,250 400,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,250 500,250 450,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW SIX LOWER -->
-    <polygon class="piece" points="0,250 50,300 0,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,250 100,300 50,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,250 150,300 100,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,250 200,300 150,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,250 250,300 200,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,250 300,300 250,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,250 350,300 300,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,250 400,300 350,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,250 450,300 400,300" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="500,250 500,300 450,300" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,250 50,300 0,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,250 100,300 50,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,250 150,300 100,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,250 200,300 150,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,250 250,300 200,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,250 300,300 250,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,250 350,300 300,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,250 400,300 350,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,250 450,300 400,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="500,250 500,300 450,300" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
     <!-- ROW SEVEN UPPER -->
-    <polygon class="piece" points="0,300 50,300 50,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,300 100,300 100,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,300 150,300 150,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,300 200,300 200,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,300 250,300 250,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,300 300,300 250,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,300 350,300 300,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,300 400,300 350,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,300 450,300 400,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,300 500,300 450,350" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,300 50,300 50,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,300 100,300 100,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,300 150,300 150,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,300 200,300 200,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,300 250,300 250,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,300 300,300 250,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,300 350,300 300,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,300 400,300 350,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,300 450,300 400,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,300 500,300 450,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW SEVEN LOWER -->
-    <polygon class="piece" points="0,300 50,350 0,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,300 100,350 50,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,300 150,350 100,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,300 200,350 150,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,300 250,350 200,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,300 300,350 250,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,300 350,350 300,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,300 400,350 350,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,300 450,350 400,350" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="500,300 500,350 450,350" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,300 50,350 0,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,300 100,350 50,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,300 150,350 100,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,300 200,350 150,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,300 250,350 200,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,300 300,350 250,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,300 350,350 300,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,300 400,350 350,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,300 450,350 400,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="500,300 500,350 450,350" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
     <!-- ROW EIGHT UPPER -->
-    <polygon class="piece" points="0,350 50,350 50,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,350 100,350 100,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,350 150,350 150,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,350 200,350 200,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,350 250,350 250,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="250,350 300,350 250,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,350 350,350 300,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,350 400,350 350,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,350 450,350 400,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,350 500,350 450,400" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,350 50,350 50,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,350 100,350 100,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,350 150,350 150,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,350 200,350 200,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,350 250,350 250,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="250,350 300,350 250,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,350 350,350 300,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,350 400,350 350,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,350 450,350 400,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,350 500,350 450,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
     <!-- ROW EIGHT LOWER -->
-    <polygon class="piece" points="0,350 50,400 0,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="50,350 100,400 50,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="100,350 150,400 100,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="150,350 200,400 150,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="200,350 250,400 200,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="300,350 300,400 250,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="350,350 350,400 300,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="400,350 400,400 350,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="450,350 450,400 400,400" stroke="#000" stroke-width="1" fill="#fff" />
-    <polygon class="piece" points="500,350 500,400 450,400" stroke="#000" stroke-width="1" fill="#fff" />
+    <polygon class="piece" points="0,350 50,400 0,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="50,350 100,400 50,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="100,350 150,400 100,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="150,350 200,400 150,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="200,350 250,400 200,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="300,350 300,400 250,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="350,350 350,400 300,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="400,350 400,400 350,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="450,350 450,400 400,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece" points="500,350 500,400 450,400" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
 
 
   </svg>
   </section>
-  <button id="repeatBlock">repeat block</button>
-  <button id="clearQuilt">clear quilt</button>
-  <section class="displayBlocks">
+  <!-- <button id="repeatBlock">repeat block</button>
+  <button id="clearQuilt">clear quilt</button> -->
+<!--   <section class="displayBlocks">
     <svg class="quilt" width="800" height="800">
       
     </svg>
-  </section>
+  </section> -->
 
   <script src="app.js"></script>
 </body>

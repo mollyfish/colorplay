@@ -1,10 +1,14 @@
 (function() {
   
-  var chosenColor = "#dd0000";
+  var chosenColor = "#fcfbf2";
 
   $(".colorChoice").on("click", function() {
+    var chosenLabel = '';
+    $(".chosenLabel").text(chosenLabel);
     chosenColor = $(this).attr("fill");
-    console.log('you chose ' + chosenColor);
+    chosenLabel = $(this).attr("id");
+    console.log('you chose ' + chosenLabel);
+    $(".chosenLabel").text(chosenLabel);
     $(".chosenColor").attr("fill", chosenColor);
   })
   $(".piece").on("click", function() {
