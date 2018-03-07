@@ -1,6 +1,18 @@
 (function() {
   
   var chosenColor = "#fcfbf2";
+  var fillColor;
+  var position;
+
+  $(".piece").hover(function() {
+    fillColor = $(this).attr("fill");
+    position = $(this).attr("class");
+    console.log(position);
+    $(this).attr("fill", "#000");
+  }, function() {
+    $(this).attr("fill", fillColor);
+  }
+);
 
   $(".colorChoice").on("click", function() {
     var chosenLabel = '';

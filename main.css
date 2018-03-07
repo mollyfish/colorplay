@@ -1,3 +1,77 @@
+.tooltip-wrap {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+}
+
+#A1,#A3,#A5,#A7,#A9,#A11,#A13,#A15,#A17,#A19 {
+  top: 6px;
+}
+#A2,#A4,#A6,#A8,#A10,#A12,#A14,#A16,#A18,#A20 {
+  top: 28px;
+}
+#A1 {
+  left: 0;
+}
+#A2 {
+  left: 25px;
+}
+#A3 {
+  left: 50px;
+}
+#A4 {
+  left: 75px;
+}
+#A5 {
+  left: 100px;
+}
+#A6 {
+  left: 125px;
+}
+#A7 {
+  left: 150px;
+}
+#A8 {
+  left: 175px;
+}
+#A9 {
+  left: 200px;
+}
+#A10 {
+  left: 225px;
+}
+#A11 {
+  left: 275px;
+}
+#A12 {
+  left: 250px;
+}
+#A13 {
+  left: 325px;
+}
+#A14 {
+  left: 300px;
+}
+#A15 {
+  left: 375px;
+}
+#A16 {
+  left: 350px;
+}
+#A17 {
+  left: 425px;
+}
+#A18 {
+  left: 400px;
+}
+#A19 {
+  left: 475px;
+}
+#A20 {
+  left: 450px;
+}
 .colors {
   position: relative;
   float: right;
@@ -50,6 +124,100 @@ svg {
   height: 400px;
   width: 500px;
   margin: 10px;
+  position: relative;
+}
+
+.block svg {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+/* ROWS */
+.A {
+  top: 0;
+}
+.B {
+  top: 50px;
+}
+.C {
+  top: 100px;
+}
+.D {
+  top: 150px;
+}
+.E {
+  top: 200px;
+}
+.F {
+  top: 250px;
+}
+.G {
+  top: 300px;
+}
+.H {
+  top: 350px;
+}
+/* COLUMNS */
+
+.a {
+  left: 0;
+}
+.b {
+  left: 50px;
+}
+.c {
+  left: 100px;
+}
+.d {
+  left: 150px;
+}
+.e {
+  left: 200px;
+}
+.f {
+  left: 250px;
+}
+.g {
+  left: 300px;
+}
+.h {
+  left: 350px;
+}
+.i {
+  left: 400px;
+}
+.j {
+  left: 450px;
+}
+.k {
+  left: 250px;
+}
+.l {
+  left: 250px;
+}
+.m {
+  left: 300px;
+}
+.n {
+  left: 300px;
+}
+.o {
+  left: 350px;
+}
+.p {
+  left: 350px;
+}
+.q {
+  left: 400px;
+}
+.r {
+  left: 400px;
+}
+.s {
+  left: 450px;
+}
+.t {
+  left: 450px;
 }
 .colors {
   display: block;
