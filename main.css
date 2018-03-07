@@ -1,6 +1,10 @@
 svg {
   display: block;
 }
+.block {
+  height: 550px;
+  width: 550px;
+}
 .editBlocks {
   float: left;
 }
