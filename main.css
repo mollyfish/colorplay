@@ -1,84 +1,47 @@
-ul {
-  list-style: none;
-  /*width: 400px;*/
-  /*margin-top: -100px;*/
-  /*margin: 0;*/
-  padding: 0;
-  transform: rotate(-90deg);
-  /*position: relative;*/
-  position: absolute;
+.colors {
+  position: relative;
+  float: right;
 }
-li {
-  /*margin-top: -200px;*/
-  margin: 0;
-  /*padding: 0;*/
-  /*transform: rotate(-90deg);*/
+
+.labels {
+  transform: rotate(-90deg);
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  top: -340px;
+  left: 255px;
 }
 
 .color-row {
-  position: relative;
-  margin-top: 2em;
+  position: absolute;
+  margin-top: 1em;
 }
 
 .color-row svg {
   position: absolute;
+  top: 15px;
+  left: 0;
 }
 
 .row1 li, .row2 li, .row3 li, .row4 li, .row5 li {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .row1 {
   top: 0;
-  left: 0;
 }
-
-.row1 ul {
-  top: -356px;
-  left: 270px;
-}
-
 .row2 {
-  top: 120px;
-  left: 0;
+  top: 123px;
 }
-
-.row2 ul {
-  top: -360px;
-  left: 264px;
-}
-
 .row3 {
-  top: 240px;
-  left: 0;
+  top: 252px;
 }
-
-.row3 ul {
-  top: -364px;
-  left: 260px;
-}
-
 .row4 {
-  top: 360px;
-  left: 0;
+  top: 382px;
 }
-
-.row4 ul {
-  top: -368px;
-  left: 260px;
-}
-
 .row5 {
-  top: 480px;
-  left: 0;
+  top: 508px;
 }
-
-.row5 ul {
-  top: -364px;
-  left: 260px;
-}
-
-
 
 svg {
   display: block;
@@ -93,9 +56,15 @@ svg {
   width: 50%;
   float: right;
 }
-.editBlocks {
-  /*float: left;*/
+
+.neutral {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 1em;
+  height: 200px;
 }
-.displayBlocks {
-  /*float: right;*/
+
+.matches {
+  float: left;
+  width: 48%;
 }

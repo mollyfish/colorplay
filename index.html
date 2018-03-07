@@ -12,132 +12,56 @@
   <!-- Place favicon.ico in the root directory -->
 
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <section class="editBlocks">
+  <section>
     <p>chosen color: <span class="chosenLabel">Mist</span></p>
-  <svg width="80" height="40">
-    <rect class="chosenColor" width="80" height="40" fill="#fcfbf2" stroke-width="0.1"stroke="rgb(0,0,0)" />
-  <div class="colors">
-  
-    <!-- <defs>
-      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="5%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="10%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="15%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="20%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="25%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="30%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="35%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="40%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="45%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="50%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="55%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="60%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="65%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="70%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="75%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="80%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="85%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="90%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-        <stop offset="95%" stop-color="rgb(255,0,0)" stop-opacity="1" />
-        <stop offset="100%" stop-color="rgb(255,255,0)" stop-opacity="1" />
-      </linearGradient>
-    </defs> -->
-  </svg>
+    <svg width="80" height="40">
+      <rect class="chosenColor" width="80" height="40" fill="#fcfbf2" stroke-width="0.1"stroke="rgb(0,0,0)" />
 
+    </svg>
+    <div class="colors clearfix">
 
 <!-- 
-
 colors: 
-4e453a Terra
-394f38 Evergreen
-255f4a Rugby
-017f51 Fern
-7ab87a Garden
-4fbc7e Meadow
-84a265 Olive
-d0e5a6 Citron
-aed9a8 Neon
-b1c887 Sap
-bbc85e Chartreuse
-efca40 Solar
-c59c30 Spark Gold
-fec037 Saffron
-fbee78 Lemon
+4e453a Terra        fab899 Burst        937c67 Tweed
+394f38 Evergreen    f6947e Apricot      8c5e2a Brown
+255f4a Rugby        f69266 Mango        ce9c72 Camel
+017f51 Fern         f37645 Mesa         761532 Cherry
+7ab87a Garden       f7951e Orange       855853 Clay
+4fbc7e Meadow       f16035 Kumquat      b285a2 Thistle
+84a265 Olive        f9c3c4 Candy        a95ea2 Petunia
+d0e5a6 Citron       f16269 Flamingo     906794 Tart
+aed9a8 Neon         f05146 Sunset       39536b Cosmic Blue
+b1c887 Sap          ee2736 Autumn       2b375b Freedom Blue
+bbc85e Chartreuse   c1196f Tropical     44749f Denim
+efca40 Solar        983261 Pomegranate  035179 Mineral
+c59c30 Spark Gold   57382b Chocolate    204294 Royal
+fec037 Saffron      663629 Canyon       166ba9 Velvet
+fbee78 Lemon        6a5141 Oak          0086ae Seaweed
 
-fab899 Burst
-f6947e Apricot
-f69266 Mango
-f37645 Mesa
-f7951e Orange
-f16035 Kumquat
-f9c3c4 Candy
-f16269 Flamingo
-f05146 Sunset
-ee2736 Autumn
-c1196f Tropical
-983261 Pomegranate
-57382b Chocolate
-663629 Canyon
-6a5141 Oak
 
-937c67 Tweed
-8c5e2a Brown
-ce9c72 Camel
-761532 Cherry
-855853 Clay
-b285a2 Thistle
-a95ea2 Petunia
-906794 Tart
-39536b Cosmic Blue
-2b375b Freedom Blue
-44749f Denim
-035179 Mineral
-204294 Royal
-166ba9 Velvet
-0086ae Seaweed
-
-35a9d1 Reef
-6ba2c1 Cadet
-0e575f Serpent
-007886 Baltic
-709ba1 Malachite
-44816b Jungle
-009e94 Jade
-3abfb1 Macaw
-70c295 Cactus
-6cc8ba Light Jade
-5ac0de Sky
-a1dcf1 Cloud
-a9ddd7 Caribbean Sea
-9baf94 Asparagus
-bda98e Sycamore
-
-cabc95 Salt
-f2ebbf Chamois
-fcfbf2 Mist
-f7edd3 Shell
-aeb7bd Silver
-ccc0b9 Sand Dune
-afa99e Dogwood
-97827d Desert
-a39986 Brass
-8c918f Shadow
-6f7579 Slate gray
-515659 Manatee
-1d1d23 Licorice
-4e2130 Vino
-46332b Chona Brown
-
+35a9d1 Reef           cabc95 Salt
+6ba2c1 Cadet          f2ebbf Chamois
+0e575f Serpent        fcfbf2 Mist
+007886 Baltic         f7edd3 Shell
+709ba1 Malachite      aeb7bd Silver
+44816b Jungle         ccc0b9 Sand Dune
+009e94 Jade           afa99e Dogwood
+3abfb1 Macaw          97827d Desert
+70c295 Cactus         a39986 Brass
+6cc8ba Light Jade     8c918f Shadow
+5ac0de Sky            6f7579 Slate gray
+a1dcf1 Cloud          515659 Manatee
+a9ddd7 Caribbean Sea  1d1d23 Licorice
+9baf94 Asparagus      4e2130 Vino
+bda98e Sycamore       46332b Chona Brown
 -->
 
-
-  <!-- <p>available colors:</p> -->
-  <div class="color-row row1">
+<div class="color-row row1">
   <ul class="labels">
     <li>Terra</li>
     <li>Evergreen</li>
@@ -155,7 +79,7 @@ a39986 Brass
     <li>Saffron</li>
     <li>Lemon</li>
   </ul>
-  <svg width="1020" height="40">
+  <svg width="590" height="40">
     <rect id="Terra" class="colorChoice" x="0" y="0" width="30" height="30" fill="#4e453a" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Evergreen" class="colorChoice" x="40" y="0" width="30" height="30" fill="#394f38" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Rugby" class="colorChoice" x="80" y="0" width="30" height="30" fill="#255f4a" stroke-width="1" stroke="rgb(0,0,0)" />
@@ -172,8 +96,8 @@ a39986 Brass
     <rect id="Saffron" class="colorChoice" x="520" y="0" width="30" height="30" fill="#fec037"  stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Lemon" class="colorChoice" x="560" y="0" width="30" height="30" fill="#fbee78"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
-  </div>
-  <div class="color-row row2">
+</div>
+<div class="color-row row2">
   <ul class="labels">
     <li>Burst</li>
     <li>Apricot</li>
@@ -191,7 +115,7 @@ a39986 Brass
     <li>Canyon</li>
     <li>Oak</li>
   </ul>
-  <svg width="1020" height="40">
+  <svg width="590" height="40">
     <rect id="Burst" class="colorChoice" x="0" y="0" width="30" height="30" fill="#fab899" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Apricot" class="colorChoice" x="40" y="0" width="30" height="30" fill="#f6947e" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Mango" class="colorChoice" x="80" y="0" width="30" height="30" fill="#f69266" stroke-width="1" stroke="rgb(0,0,0)" />
@@ -208,8 +132,8 @@ a39986 Brass
     <rect id="Canyon" class="colorChoice" x="520" y="0" width="30" height="30" fill="#663629"  stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Oak" class="colorChoice" x="560" y="0" width="30" height="30" fill="#6a5141"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
-  </div>
-  <div class="color-row row3">
+</div>
+<div class="color-row row3">
   <ul class="labels">
     <li>Tweed</li>
     <li>Brown</li>
@@ -227,7 +151,7 @@ a39986 Brass
     <li>Velvet</li>
     <li>Seaweed</li>
   </ul>
-  <svg width="1020" height="40">
+  <svg width="590" height="40">
     <rect id="Tweed" class="colorChoice" x="0" y="0" width="30" height="30" fill="#937c67" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Brown" class="colorChoice" x="40" y="0" width="30" height="30" fill="#8c5e2a" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Camel" class="colorChoice" x="80" y="0" width="30" height="30" fill="#ce9c72" stroke-width="1" stroke="rgb(0,0,0)" />
@@ -244,8 +168,8 @@ a39986 Brass
     <rect id="Velvet" class="colorChoice" x="520" y="0" width="30" height="30" fill="#166ba9"  stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Seaweed" class="colorChoice" x="560" y="0" width="30" height="30" fill="#0086ae"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
-  </div>
-  <div class="color-row row4">
+</div>
+<div class="color-row row4">
   <ul class="labels">
     <li>Reef</li>
     <li>Cadet</li>
@@ -263,7 +187,7 @@ a39986 Brass
     <li>Asparagus</li>
     <li>Sycamore</li>
   </ul>
-  <svg width="1020" height="40">
+  <svg width="590" height="40">
     <rect id="Reef" class="colorChoice" x="0" y="0" width="30" height="30" fill="#35a9d1" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Cadet" class="colorChoice" x="40" y="0" width="30" height="30" fill="#6ba2c1" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Serpent" class="colorChoice" x="80" y="0" width="30" height="30" fill="#0e575f" stroke-width="1" stroke="rgb(0,0,0)" />
@@ -280,8 +204,8 @@ a39986 Brass
     <rect id="Asparagus" class="colorChoice" x="520" y="0" width="30" height="30" fill="#9baf94"  stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Sycamore" class="colorChoice" x="560" y="0" width="30" height="30" fill="#bda98e"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
-  </div>
-  <div class="color-row row5">
+</div>
+<div class="color-row row5">
   <ul class="labels">
     <li>Salt</li>
     <li>Chamois</li>
@@ -299,7 +223,7 @@ a39986 Brass
     <li>Vino</li>
     <li>Chona Brown</li>
   </ul>
-  <svg width="1020" height="40">
+  <svg width="590" height="40">
     <rect id="Salt" class="colorChoice" x="0" y="0" width="30" height="30" fill="#cabc95" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Chamois" class="colorChoice" x="40" y="0" width="30" height="30" fill="#f2ebbf" stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Mist" class="colorChoice" x="80" y="0" width="30" height="30" fill="#fcfbf2" stroke-width="1" stroke="rgb(0,0,0)" />
@@ -316,13 +240,13 @@ a39986 Brass
     <rect id="Vino" class="colorChoice" x="520" y="0" width="30" height="30" fill="#4e2130"  stroke-width="1" stroke="rgb(0,0,0)" />
     <rect id="Chona Brown" class="colorChoice" x="560" y="0" width="30" height="30" fill="#46332b"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg>
-  </div>
-  </div>
+</div>
+</div>
 <!--   <p>available patterns:</p>
   <svg width="200" height="20">
     <rect class="colorChoice" x="0" y="0" width="20" height="20" fill="url(#grad1)"  stroke-width="1" stroke="rgb(0,0,0)" />
   </svg> -->
-  <p>block:</p><button id="clearBlock">clear all</button>
+  <!-- <p>block:</p> -->
   <svg class="block">
     <!-- ROW ONE UPPER -->
     <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
@@ -510,13 +434,28 @@ a39986 Brass
 
 
   </svg>
-  </section>
+  <button id="clearBlock">clear all</button>
+</section>
   <!-- <button id="repeatBlock">repeat block</button>
   <button id="clearQuilt">clear quilt</button> -->
 <!--   <section class="displayBlocks">
     <svg class="quilt" width="800" height="800">
       
     </svg>
+  </section> -->
+  <!-- <section class="matches clearfix">
+    <h2>Chamois</h2>
+    <article class="neutral">
+      
+    </article>
+    <h2>Mist</h2>
+    <article class="neutral">
+      
+    </article>
+    <h2>Shell</h2>
+    <article class="neutral">
+      
+    </article>
   </section> -->
 
   <script src="app.js"></script>
