@@ -82,8 +82,9 @@
     Chona_Brown: "#46332b"
 }
 
-
-  
+  var colorsInUse = [];
+  var blocks = [];
+  var indices = [];
   var chosenColor = "#fcfbf2";
   var fillColorId;
   var fillColorName;
@@ -91,6 +92,63 @@
   var pieceClasses;
   var pieceId;
   var showColors;
+
+  function logColors() {
+    colorsInUse = [];
+    $(".piece").each(function(i) {
+      colorsInUse.push($(this).attr("fill"));
+    });
+  }
+
+  function mapBlocks() {
+    var shortBlocks = [];
+    blocks = [];
+    $(".block svg").each(function(i) {
+      var classes = $(this).attr("class");
+      classes = classes.replace(/\s+/g, '');
+      console.log(classes);
+      blocks.push(classes);
+    })
+
+
+
+    return blocks;
+  }
+
+  function displayColors() {
+    logColors();
+    var blockList = mapBlocks();
+    console.log(blockList.length);
+    console.log(colorsInUse.length);
+    for (var i = 0; i < colorsInUse.length; i++) {
+      var color = getKeyByValue(colorIndex, colorsInUse[i]);
+      $("#toPrint").append("<li>" + color + "</li>");
+    };
+  }
+
+  function countOccurences(arr, lookFor) {
+    indices = [];
+    var element = lookFor;
+    var idx = arr.indexOf(element);
+    while (idx != -1) {
+      indices.push(idx);
+      idx = arr.indexOf(element, idx + 1);
+    }
+    return indices;
+    // [0, 2, 4]
+  }
+
+  function checkUsage(obj) {
+    logColors();
+    var color = obj.attr("fill");
+    var count = countOccurences(colorsInUse, color);
+    // allow neutrals to be used more than twice
+    if (color != "#fcfbf2" && color != "#f2ebbf" && color != "#f7edd3") {
+    if (count.length > 1) {
+        alert("You have already used that color twice - please choose another");
+      }
+    }
+  }
 
   function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
@@ -130,6 +188,7 @@
   $(".colorChoice").on("click", function() {
     var chosenLabel = '';
     $(".chosenLabel").text(chosenLabel);
+    checkUsage($(this));
     chosenColor = $(this).attr("fill");
     chosenLabel = $(this).attr("id");
     console.log('you chose ' + chosenLabel);
@@ -141,6 +200,15 @@
   })
   $("#clearBlock").on("click", function() {
     $(".piece").attr("fill", "#fff");
+  })
+  $("#logBlock").on("click", function() {
+    logColors();
+    console.log(colorsInUse);
+    // colorsInUse = [];
+  })
+  $("#displayBlock").on("click", function() {
+    $("#toPrint").empty();
+    displayColors();
   })
   $("#repeatBlock").on("click", function() {
     // add functionality to do something other than 3x3 repeat
