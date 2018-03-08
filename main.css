@@ -1,3 +1,5 @@
+@media screen {
+
 .tooltip-wrap {
   position: relative;
   height: 400px;
@@ -68,62 +70,6 @@
 #Ahinner, #Bhinner, #Chinner, #Dhinner, #Ehinner, #Fhinner, #Ghinner, #Hhinner, #Ihinner   { left: 350px;}
 #Aiinner, #Biinner, #Ciinner, #Diinner, #Eiinner, #Fiinner, #Giinner, #Hiinner, #Iiinner   { left: 400px;}
 #Ajinner, #Bjinner, #Cjinner, #Djinner, #Ejinner, #Fjinner, #Gjinner, #Hjinner, #Ijinner   { left: 450px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #A1 {
   left: 0;
@@ -201,7 +147,7 @@
 
 .color-row {
   position: absolute;
-  margin-top: 1em;
+  margin-top: -30px;
 }
 
 .color-row svg {
@@ -215,19 +161,19 @@
 }
 
 .row1 {
-  top: 0;
+  top: -10px;
 }
 .row2 {
-  top: 123px;
+  top: 128px;
 }
 .row3 {
-  top: 252px;
+  top: 266px;
 }
 .row4 {
-  top: 382px;
+  top: 406px;
 }
 .row5 {
-  top: 508px;
+  top: 544px;
 }
 
 svg {
@@ -352,4 +298,17 @@ label {
 .matches {
   float: left;
   width: 48%;
+}
+
+#toPrint {
+  width: 45%;
+  margin: 1em;
+  column-count: 2;
+  column-rule: 1px solid #ddd;
+}
+
+#toPrint li {
+  margin: 0 0 0.5em 0;
+}
+
 }

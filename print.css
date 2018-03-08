@@ -1,0 +1,23 @@
+@media print {
+  .colorChoices {
+    display: none;
+  }
+  .tooltip {
+    display: none;
+  }
+  .quilt {
+    display: none;
+  }
+  #toPrint {
+    font-size: 130%;
+    list-style: none;
+    width: 100%;
+    margin: 1em;
+    column-count: 3;
+    column-rule: 1px solid #ddd;
+  }
+  
+  #toPrint li {
+    margin: 0 0 0.5em 0;
+  }
+}
