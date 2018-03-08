@@ -21,45 +21,9 @@
     <p>chosen color: <span class="chosenLabel">Mist</span></p>
     <svg width="80" height="40">
       <rect class="chosenColor" width="80" height="40" fill="#fcfbf2" stroke-width="0.1"stroke="rgb(0,0,0)" />
-
     </svg>
+    <label>Enable color ID<input type="checkbox" id="enableTooltips" ></label>
     <div class="colors clearfix">
-
-<!-- 
-colors: 
-4e453a Terra        fab899 Burst        937c67 Tweed
-394f38 Evergreen    f6947e Apricot      8c5e2a Brown
-255f4a Rugby        f69266 Mango        ce9c72 Camel
-017f51 Fern         f37645 Mesa         761532 Cherry
-7ab87a Garden       f7951e Orange       855853 Clay
-4fbc7e Meadow       f16035 Kumquat      b285a2 Thistle
-84a265 Olive        f9c3c4 Candy        a95ea2 Petunia
-d0e5a6 Citron       f16269 Flamingo     906794 Tart
-aed9a8 Neon         f05146 Sunset       39536b Cosmic Blue
-b1c887 Sap          ee2736 Autumn       2b375b Freedom Blue
-bbc85e Chartreuse   c1196f Tropical     44749f Denim
-efca40 Solar        983261 Pomegranate  035179 Mineral
-c59c30 Spark Gold   57382b Chocolate    204294 Royal
-fec037 Saffron      663629 Canyon       166ba9 Velvet
-fbee78 Lemon        6a5141 Oak          0086ae Seaweed
-
-
-35a9d1 Reef           cabc95 Salt
-6ba2c1 Cadet          f2ebbf Chamois
-0e575f Serpent        fcfbf2 Mist
-007886 Baltic         f7edd3 Shell
-709ba1 Malachite      aeb7bd Silver
-44816b Jungle         ccc0b9 Sand Dune
-009e94 Jade           afa99e Dogwood
-3abfb1 Macaw          97827d Desert
-70c295 Cactus         a39986 Brass
-6cc8ba Light Jade     8c918f Shadow
-5ac0de Sky            6f7579 Slate gray
-a1dcf1 Cloud          515659 Manatee
-a9ddd7 Caribbean Sea  1d1d23 Licorice
-9baf94 Asparagus      4e2130 Vino
-bda98e Sycamore       46332b Chona Brown
--->
 
 <div class="color-row row1">
   <ul class="labels">
@@ -249,378 +213,545 @@ bda98e Sycamore       46332b Chona Brown
   <!-- <p>block:</p> -->
   <div class="tooltip-wrap">
   <!-- ONE UPPER -->
-  <!-- <span class="tooltip" id="A1">Terra</span>
-  <span class="tooltip" id="A2">Terra</span>
-  <span class="tooltip" id="A3">Terra</span>
-  <span class="tooltip" id="A4">Terra</span>
-  <span class="tooltip" id="A5">Terra</span>
-  <span class="tooltip" id="A6">Terra</span>
-  <span class="tooltip" id="A7">Terra</span>
-  <span class="tooltip" id="A8">Terra</span>
-  <span class="tooltip" id="A9">Terra</span>
-  <span class="tooltip" id="A10">Terra</span> -->
-  <!-- ONE LOWER -->
-  <!-- <span class="tooltip" id="A11">Terra</span>
-  <span class="tooltip" id="A12">Terra</span>
-  <span class="tooltip" id="A13">Terra</span>
-  <span class="tooltip" id="A14">Terra</span>
-  <span class="tooltip" id="A15">Terra</span>
-  <span class="tooltip" id="A16">Terra</span>
-  <span class="tooltip" id="A17">Terra</span>
-  <span class="tooltip" id="A18">Terra</span>
-  <span class="tooltip" id="A19">Terra</span>
-  <span class="tooltip" id="A20">Terra</span> -->
+  <span class="tooltip hidden" id="Aaouter"></span>
+  <span class="tooltip hidden" id="Aainner"></span>
+  <span class="tooltip hidden" id="Abouter"></span>
+  <span class="tooltip hidden" id="Abinner"></span>
+  <span class="tooltip hidden" id="Acouter"></span>
+  <span class="tooltip hidden" id="Acinner"></span>
+  <span class="tooltip hidden" id="Adouter"></span>
+  <span class="tooltip hidden" id="Adinner"></span>
+  <span class="tooltip hidden" id="Aeouter"></span>
+  <span class="tooltip hidden" id="Aeinner"></span>
+  <span class="tooltip hidden" id="Afinner"></span>
+  <span class="tooltip hidden" id="Afouter"></span>
+  <span class="tooltip hidden" id="Aginner"></span>
+  <span class="tooltip hidden" id="Agouter"></span>
+  <span class="tooltip hidden" id="Ahinner"></span>
+  <span class="tooltip hidden" id="Ahouter"></span>
+  <span class="tooltip hidden" id="Aiinner"></span>
+  <span class="tooltip hidden" id="Aiouter"></span>
+  <span class="tooltip hidden" id="Ajinner"></span>
+  <span class="tooltip hidden" id="Ajouter"></span>
+
+  <span class="tooltip hidden" id="Baouter"></span>
+  <span class="tooltip hidden" id="Bainner"></span>
+  <span class="tooltip hidden" id="Bbouter"></span>
+  <span class="tooltip hidden" id="Bbinner"></span>
+  <span class="tooltip hidden" id="Bcouter"></span>
+  <span class="tooltip hidden" id="Bcinner"></span>
+  <span class="tooltip hidden" id="Bdouter"></span>
+  <span class="tooltip hidden" id="Bdinner"></span>
+  <span class="tooltip hidden" id="Beouter"></span>
+  <span class="tooltip hidden" id="Beinner"></span>
+  <span class="tooltip hidden" id="Bfinner"></span>
+  <span class="tooltip hidden" id="Bfouter"></span>
+  <span class="tooltip hidden" id="Bginner"></span>
+  <span class="tooltip hidden" id="Bgouter"></span>
+  <span class="tooltip hidden" id="Bhinner"></span>
+  <span class="tooltip hidden" id="Bhouter"></span>
+  <span class="tooltip hidden" id="Biinner"></span>
+  <span class="tooltip hidden" id="Biouter"></span>
+  <span class="tooltip hidden" id="Bjinner"></span>
+  <span class="tooltip hidden" id="Bjouter"></span>
+
+  <span class="tooltip hidden" id="Caouter"></span>
+  <span class="tooltip hidden" id="Cainner"></span>
+  <span class="tooltip hidden" id="Cbouter"></span>
+  <span class="tooltip hidden" id="Cbinner"></span>
+  <span class="tooltip hidden" id="Ccouter"></span>
+  <span class="tooltip hidden" id="Ccinner"></span>
+  <span class="tooltip hidden" id="Cdouter"></span>
+  <span class="tooltip hidden" id="Cdinner"></span>
+  <span class="tooltip hidden" id="Ceouter"></span>
+  <span class="tooltip hidden" id="Ceinner"></span>
+  <span class="tooltip hidden" id="Cfinner"></span>
+  <span class="tooltip hidden" id="Cfouter"></span>
+  <span class="tooltip hidden" id="Cginner"></span>
+  <span class="tooltip hidden" id="Cgouter"></span>
+  <span class="tooltip hidden" id="Chinner"></span>
+  <span class="tooltip hidden" id="Chouter"></span>
+  <span class="tooltip hidden" id="Ciinner"></span>
+  <span class="tooltip hidden" id="Ciouter"></span>
+  <span class="tooltip hidden" id="Cjinner"></span>
+  <span class="tooltip hidden" id="Cjouter"></span>
+
+  <span class="tooltip hidden" id="Daouter"></span>
+  <span class="tooltip hidden" id="Dainner"></span>
+  <span class="tooltip hidden" id="Dbouter"></span>
+  <span class="tooltip hidden" id="Dbinner"></span>
+  <span class="tooltip hidden" id="Dcouter"></span>
+  <span class="tooltip hidden" id="Dcinner"></span>
+  <span class="tooltip hidden" id="Ddouter"></span>
+  <span class="tooltip hidden" id="Ddinner"></span>
+  <span class="tooltip hidden" id="Deouter"></span>
+  <span class="tooltip hidden" id="Deinner"></span>
+  <span class="tooltip hidden" id="Dfinner"></span>
+  <span class="tooltip hidden" id="Dfouter"></span>
+  <span class="tooltip hidden" id="Dginner"></span>
+  <span class="tooltip hidden" id="Dgouter"></span>
+  <span class="tooltip hidden" id="Dhinner"></span>
+  <span class="tooltip hidden" id="Dhouter"></span>
+  <span class="tooltip hidden" id="Diinner"></span>
+  <span class="tooltip hidden" id="Diouter"></span>
+  <span class="tooltip hidden" id="Djinner"></span>
+  <span class="tooltip hidden" id="Djouter"></span>
+
+  <span class="tooltip hidden" id="Eaouter"></span>
+  <span class="tooltip hidden" id="Eainner"></span>
+  <span class="tooltip hidden" id="Ebouter"></span>
+  <span class="tooltip hidden" id="Ebinner"></span>
+  <span class="tooltip hidden" id="Ecouter"></span>
+  <span class="tooltip hidden" id="Ecinner"></span>
+  <span class="tooltip hidden" id="Edouter"></span>
+  <span class="tooltip hidden" id="Edinner"></span>
+  <span class="tooltip hidden" id="Eeouter"></span>
+  <span class="tooltip hidden" id="Eeinner"></span>
+  <span class="tooltip hidden" id="Efinner"></span>
+  <span class="tooltip hidden" id="Efouter"></span>
+  <span class="tooltip hidden" id="Eginner"></span>
+  <span class="tooltip hidden" id="Egouter"></span>
+  <span class="tooltip hidden" id="Ehinner"></span>
+  <span class="tooltip hidden" id="Ehouter"></span>
+  <span class="tooltip hidden" id="Eiinner"></span>
+  <span class="tooltip hidden" id="Eiouter"></span>
+  <span class="tooltip hidden" id="Ejinner"></span>
+  <span class="tooltip hidden" id="Ejouter"></span>
+
+  <span class="tooltip hidden" id="Faouter"></span>
+  <span class="tooltip hidden" id="Fainner"></span>
+  <span class="tooltip hidden" id="Fbouter"></span>
+  <span class="tooltip hidden" id="Fbinner"></span>
+  <span class="tooltip hidden" id="Fcouter"></span>
+  <span class="tooltip hidden" id="Fcinner"></span>
+  <span class="tooltip hidden" id="Fdouter"></span>
+  <span class="tooltip hidden" id="Fdinner"></span>
+  <span class="tooltip hidden" id="Feouter"></span>
+  <span class="tooltip hidden" id="Feinner"></span>
+  <span class="tooltip hidden" id="Ffinner"></span>
+  <span class="tooltip hidden" id="Ffouter"></span>
+  <span class="tooltip hidden" id="Fginner"></span>
+  <span class="tooltip hidden" id="Fgouter"></span>
+  <span class="tooltip hidden" id="Fhinner"></span>
+  <span class="tooltip hidden" id="Fhouter"></span>
+  <span class="tooltip hidden" id="Fiinner"></span>
+  <span class="tooltip hidden" id="Fiouter"></span>
+  <span class="tooltip hidden" id="Fjinner"></span>
+  <span class="tooltip hidden" id="Fjouter"></span>
+
+  <span class="tooltip hidden" id="Gaouter"></span>
+  <span class="tooltip hidden" id="Gainner"></span>
+  <span class="tooltip hidden" id="Gbouter"></span>
+  <span class="tooltip hidden" id="Gbinner"></span>
+  <span class="tooltip hidden" id="Gcouter"></span>
+  <span class="tooltip hidden" id="Gcinner"></span>
+  <span class="tooltip hidden" id="Gdouter"></span>
+  <span class="tooltip hidden" id="Gdinner"></span>
+  <span class="tooltip hidden" id="Geouter"></span>
+  <span class="tooltip hidden" id="Geinner"></span>
+  <span class="tooltip hidden" id="Gfinner"></span>
+  <span class="tooltip hidden" id="Gfouter"></span>
+  <span class="tooltip hidden" id="Gginner"></span>
+  <span class="tooltip hidden" id="Ggouter"></span>
+  <span class="tooltip hidden" id="Ghinner"></span>
+  <span class="tooltip hidden" id="Ghouter"></span>
+  <span class="tooltip hidden" id="Giinner"></span>
+  <span class="tooltip hidden" id="Giouter"></span>
+  <span class="tooltip hidden" id="Gjinner"></span>
+  <span class="tooltip hidden" id="Gjouter"></span>
+
+  <span class="tooltip hidden" id="Haouter"></span>
+  <span class="tooltip hidden" id="Hainner"></span>
+  <span class="tooltip hidden" id="Hbouter"></span>
+  <span class="tooltip hidden" id="Hbinner"></span>
+  <span class="tooltip hidden" id="Hcouter"></span>
+  <span class="tooltip hidden" id="Hcinner"></span>
+  <span class="tooltip hidden" id="Hdouter"></span>
+  <span class="tooltip hidden" id="Hdinner"></span>
+  <span class="tooltip hidden" id="Heouter"></span>
+  <span class="tooltip hidden" id="Heinner"></span>
+  <span class="tooltip hidden" id="Hfinner"></span>
+  <span class="tooltip hidden" id="Hfouter"></span>
+  <span class="tooltip hidden" id="Hginner"></span>
+  <span class="tooltip hidden" id="Hgouter"></span>
+  <span class="tooltip hidden" id="Hhinner"></span>
+  <span class="tooltip hidden" id="Hhouter"></span>
+  <span class="tooltip hidden" id="Hiinner"></span>
+  <span class="tooltip hidden" id="Hiouter"></span>
+  <span class="tooltip hidden" id="Hjinner"></span>
+  <span class="tooltip hidden" id="Hjouter"></span>
+
+  <span class="tooltip hidden" id="Iaouter"></span>
+  <span class="tooltip hidden" id="Iainner"></span>
+  <span class="tooltip hidden" id="Ibouter"></span>
+  <span class="tooltip hidden" id="Ibinner"></span>
+  <span class="tooltip hidden" id="Icouter"></span>
+  <span class="tooltip hidden" id="Icinner"></span>
+  <span class="tooltip hidden" id="Idouter"></span>
+  <span class="tooltip hidden" id="Idinner"></span>
+  <span class="tooltip hidden" id="Ieouter"></span>
+  <span class="tooltip hidden" id="Ieinner"></span>
+  <span class="tooltip hidden" id="Ifinner"></span>
+  <span class="tooltip hidden" id="Ifouter"></span>
+  <span class="tooltip hidden" id="Iginner"></span>
+  <span class="tooltip hidden" id="Igouter"></span>
+  <span class="tooltip hidden" id="Ihinner"></span>
+  <span class="tooltip hidden" id="Ihouter"></span>
+  <span class="tooltip hidden" id="Iiinner"></span>
+  <span class="tooltip hidden" id="Iiouter"></span>
+  <span class="tooltip hidden" id="Ijinner"></span>
+  <span class="tooltip hidden" id="Ijouter"></span>
   <div class="block">
   <!-- ROW ONE LEFT -->
   <svg class="A a">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A b">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A c">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A d">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A e">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW ONE RIGHT -->
   <svg class="A f">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A g">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A h">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A i">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="A j">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW TWO LEFT -->
   <svg class="B a">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B b">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B c">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B d">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B e">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW TWO RIGHT -->
   <svg class="B f">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B g">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B h">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B i">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="B j">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW THREE LEFT -->
   <svg class="C a">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C b">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C c">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C d">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C e">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW THREE RIGHT -->
   <svg class="C f">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C g">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C h">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C i">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="C j">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW FOUR LEFT -->
   <svg class="D a">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D b">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D c">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D d">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D e">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW FOUR RIGHT -->
   <svg class="D f">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D g">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D h">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D i">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="D j">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW FIVE LEFT -->
   <svg class="E a">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E b">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E c">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E d">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E e">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW FIVE RIGHT -->
   <svg class="E f">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E g">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E h">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E i">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="E j">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW SIX LEFT -->
   <svg class="F a">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F b">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F c">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F d">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F e">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW SIX RIGHT -->
   <svg class="F f">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F g">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F h">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F i">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="F j">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW SEVEN LEFT -->
   <svg class="G a">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G b">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G c">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G d">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G e">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW SEVEN RIGHT -->
   <svg class="G f">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G g">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G h">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G i">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="G j">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW EIGHT LEFT -->
   <svg class="H a">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H b">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H c">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H d">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H e">
-    <polygon class="piece" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="0,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 50,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
 
   <!-- ROW EIGHT RIGHT -->
   <svg class="H f">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H g">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H h">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H i">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   <svg class="H j">
-    <polygon class="piece" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
-    <polygon class="piece" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece inner" points="0,0 50,0 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
+    <polygon class="piece outer" points="50,0 50,50 0,50" stroke="#ccc" stroke-width="0.5" fill="#fcfbf2" />
   </svg>
   
   </div>
