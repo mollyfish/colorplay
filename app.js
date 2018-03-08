@@ -1,6 +1,22 @@
 (function() {
 
   var colorIndex = {
+    Terra: "#4e453a",
+    Evergreen: "#394f38",
+    Rugby: "#255f4a",
+    Fern: "#017f51",
+    Garden: "#7ab87a",
+    Meadow: "#4fbc7e",
+    Olive: "#84a265",
+    Citron: "#d0e5a6",
+    Neon: "#aed9a8",
+    Sap: "#b1c887",
+    Chartreuse: "#bbc85e",
+    Solar: "#efca40",
+    Spark_Gold: "#c59c30",
+    Saffron: "#fec037",
+    Lemon: "#fbee78",
+
     Burst: "#fab899",
     Apricot: "#f6947e",
     Mango: "#f69266",
@@ -32,22 +48,6 @@
     Royal: "#204294",
     Velvet: "#166ba9",
     Seaweed: "#0086ae",
-
-    Terra: "#4e453a",
-    Evergreen: "#394f38",
-    Rugby: "#255f4a",
-    Fern: "#017f51",
-    Garden: "#7ab87a",
-    Meadow: "#4fbc7e",
-    Olive: "#84a265",
-    Citron: "#d0e5a6",
-    Neon: "#aed9a8",
-    Sap: "#b1c887",
-    Chartreuse: "#bbc85e",
-    Solar: "#efca40",
-    Spark_Gold: "#c59c30",
-    Saffron: "#fec037",
-    Lemon: "#fbee78",
 
     Reef: "#35a9d1",   
     Cadet: "#6ba2c1",   
@@ -83,7 +83,7 @@
 }
 
   var colorsInUse = [];
-  var blocks = [];
+  var colorPairs = [];
   var indices = [];
   var chosenColor = "#fcfbf2";
   var fillColorId;
@@ -101,28 +101,36 @@
   }
 
   function mapBlocks() {
-    var shortBlocks = [];
-    blocks = [];
+    colorPairs = [];
+    logColors();
+    var colorPair = {};
     $(".block svg").each(function(i) {
-      var classes = $(this).attr("class");
-      classes = classes.replace(/\s+/g, '');
-      console.log(classes);
-      blocks.push(classes);
+      // logColors();
+      var outerFill = $(this).children(".outer").attr("fill");
+      // console.log(outerFill);
+      var outerColor = getKeyByValue(colorIndex, outerFill);
+      // console.log(outerColor);
+      var innerFill = $(this).children(".inner").attr("fill");
+      // console.log(innerFill);
+      var innerColor = getKeyByValue(colorIndex, innerFill);
+      // console.log(innerColor);
+      colorPair.outer = outerColor;
+      // console.log(colorPair);
+      colorPair.inner = innerColor;
+      // console.log(colorPair);
+      colorPairs.push(colorPair);
+      colorPair = {};
     })
-
-
-
-    return blocks;
+    console.log(colorPairs);
+    return colorPairs;
   }
 
   function displayColors() {
     logColors();
-    var blockList = mapBlocks();
-    console.log(blockList.length);
-    console.log(colorsInUse.length);
-    for (var i = 0; i < colorsInUse.length; i++) {
-      var color = getKeyByValue(colorIndex, colorsInUse[i]);
-      $("#toPrint").append("<li>" + color + "</li>");
+    var colorsByBlock = mapBlocks();
+    // console.log(colorsByBlock);
+    for (var i = 0; i < colorsByBlock.length; i++) {
+      $("#toPrint").append("<li>"+ (i + 1) + ": " + colorsByBlock[i].outer + " / " + colorsByBlock[i].inner + "</li>");
     };
   }
 
@@ -135,10 +143,10 @@
       idx = arr.indexOf(element, idx + 1);
     }
     return indices;
-    // [0, 2, 4]
   }
 
-  function checkUsage(obj) {
+  function checkChoice(obj) {
+    // console.log('checkChoice');
     logColors();
     var color = obj.attr("fill");
     var count = countOccurences(colorsInUse, color);
@@ -146,8 +154,25 @@
     if (color != "#fcfbf2" && color != "#f2ebbf" && color != "#f7edd3") {
     if (count.length > 1) {
         alert("You have already used that color twice - please choose another");
+        return false;
       }
+      return true;
     }
+    return true;
+  }
+
+  function checkUsage(color) {
+    // console.log('checkUsage');
+    logColors();
+    var count = countOccurences(colorsInUse, color);
+    if (color != "#fcfbf2" && color != "#f2ebbf" && color != "#f7edd3") {
+    if (count.length > 1) {
+        alert("You have already used that color twice - please choose another");
+        return false;
+      }
+      return true;
+    }
+    return true;
   }
 
   function getKeyByValue(object, value) {
@@ -172,7 +197,6 @@
       pieceClasses = $(this).attr("class");
       pieceClasses = pieceClasses.replace("piece ", "");
       pieceId = parentClasses + pieceClasses;
-  
       $("#"+pieceId+"").text('');
       $("#"+pieceId+"").text(fillColorName);
       $("#"+pieceId+"").removeClass('hidden');
@@ -183,20 +207,21 @@
     }
   });
 
-
-
   $(".colorChoice").on("click", function() {
     var chosenLabel = '';
     $(".chosenLabel").text(chosenLabel);
-    checkUsage($(this));
+    var allowChoice = checkChoice($(this));
     chosenColor = $(this).attr("fill");
     chosenLabel = $(this).attr("id");
-    console.log('you chose ' + chosenLabel);
     $(".chosenLabel").text(chosenLabel);
     $(".chosenColor").attr("fill", chosenColor);
+    console.log('you chose ' + chosenLabel);
   })
   $(".piece").on("click", function() {
-    $(this).attr("fill", chosenColor);
+    var performFill = checkUsage(chosenColor);
+    if (performFill) {
+      $(this).attr("fill", chosenColor);
+    }
   })
   $("#clearBlock").on("click", function() {
     $(".piece").attr("fill", "#fff");
@@ -204,7 +229,6 @@
   $("#logBlock").on("click", function() {
     logColors();
     console.log(colorsInUse);
-    // colorsInUse = [];
   })
   $("#displayBlock").on("click", function() {
     $("#toPrint").empty();
