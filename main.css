@@ -8,6 +8,11 @@
 .tooltip {
   position: absolute;
   z-index: 99;
+  padding: 0.3em;
+  font-family: Arial;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  border-radius: 5px;
 }
 
 .hidden {
