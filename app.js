@@ -105,19 +105,12 @@
     logColors();
     var colorPair = {};
     $(".block svg").each(function(i) {
-      // logColors();
       var outerFill = $(this).children(".outer").attr("fill");
-      // console.log(outerFill);
       var outerColor = getKeyByValue(colorIndex, outerFill);
-      // console.log(outerColor);
       var innerFill = $(this).children(".inner").attr("fill");
-      // console.log(innerFill);
       var innerColor = getKeyByValue(colorIndex, innerFill);
-      // console.log(innerColor);
       colorPair.outer = outerColor;
-      // console.log(colorPair);
       colorPair.inner = innerColor;
-      // console.log(colorPair);
       colorPairs.push(colorPair);
       colorPair = {};
     })
@@ -128,7 +121,6 @@
   function displayColors() {
     logColors();
     var colorsByBlock = mapBlocks();
-    // console.log(colorsByBlock);
     for (var i = 0; i < colorsByBlock.length; i++) {
       $("#toPrint").append("<li>"+ (i + 1) + ": " + colorsByBlock[i].outer + " / " + colorsByBlock[i].inner + "</li>");
     };
@@ -146,7 +138,6 @@
   }
 
   function checkChoice(obj) {
-    // console.log('checkChoice');
     logColors();
     var color = obj.attr("fill");
     var count = countOccurences(colorsInUse, color);
@@ -162,7 +153,6 @@
   }
 
   function checkUsage(color) {
-    // console.log('checkUsage');
     logColors();
     var count = countOccurences(colorsInUse, color);
     if (color != "#fcfbf2" && color != "#f2ebbf" && color != "#f7edd3") {
@@ -224,7 +214,8 @@
     }
   })
   $("#clearBlock").on("click", function() {
-    $(".piece").attr("fill", "#fff");
+    $(".piece").attr("fill", "#fcfbf2");
+    $("#toPrint").empty();
   })
   $("#logBlock").on("click", function() {
     logColors();
