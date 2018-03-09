@@ -5,9 +5,9 @@
   .tooltip {
     display: none;
   }
-  .quilt {
+  /*.quilt {
     display: none;
-  }
+  }*/
   #toPrint {
     font-size: 130%;
     list-style: none;
@@ -19,5 +19,112 @@
   
   #toPrint li {
     margin: 0 0 0.5em 0;
+  }
+
+  #clearBlock, #logBlock, #displayBlock {
+    display: none;
+  }
+
+  .block {
+    display: block;
+  }
+  .block {
+    height: 400px;
+    width: 500px;
+    position: relative;
+  }
+  
+  .block svg {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+  }
+
+  /* ROWS */
+  .A {
+    top: 0;
+  }
+  .B {
+    top: 50px;
+  }
+  .C {
+    top: 100px;
+  }
+  .D {
+    top: 150px;
+  }
+  .E {
+    top: 200px;
+  }
+  .F {
+    top: 250px;
+  }
+  .G {
+    top: 300px;
+  }
+  .H {
+    top: 350px;
+  }
+  /* COLUMNS */
+  
+  .a {
+    left: 0;
+  }
+  .b {
+    left: 50px;
+  }
+  .c {
+    left: 100px;
+  }
+  .d {
+    left: 150px;
+  }
+  .e {
+    left: 200px;
+  }
+  .f {
+    left: 250px;
+  }
+  .g {
+    left: 300px;
+  }
+  .h {
+    left: 350px;
+  }
+  .i {
+    left: 400px;
+  }
+  .j {
+    left: 450px;
+  }
+  .k {
+    left: 250px;
+  }
+  .l {
+    left: 250px;
+  }
+  .m {
+    left: 300px;
+  }
+  .n {
+    left: 300px;
+  }
+  .o {
+    left: 350px;
+  }
+  .p {
+    left: 350px;
+  }
+  .q {
+    left: 400px;
+  }
+  .r {
+    left: 400px;
+  }
+  .s {
+    left: 450px;
+  }
+  .t {
+    left: 450px;
   }
 }
