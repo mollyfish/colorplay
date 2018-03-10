@@ -1,184 +1,33 @@
 @media screen {
 
-.tooltip-wrap {
-  position: relative;
-  height: 400px;
-  width: 500px;
-  margin: 10px;
+body {
+  padding: 1em;
+  min-height: 100%;
 }
 
-.tooltip {
-  position: absolute;
-  z-index: 99;
-  padding: 0.3em;
-  font-family: Arial;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
-  border-radius: 5px;
-}
-
-.hidden {
-  display: none;
-}
-
-#Aaouter,#Abouter,#Acouter,#Adouter,#Aeouter,#Afouter,#Agouter,#Ahouter,#Aiouter,#Ajouter,#Aainner,#Abinner,#Acinner,#Adinner,#Aeinner,#Afinner,#Aginner,#Ahinner,#Aiinner,#Ajinner {
-  top: -30px;
-}
-#Baouter,#Bbouter,#Bcouter,#Bdouter,#Beouter,#Bfouter,#Bgouter,#Bhouter,#Biouter,#Bjouter,#Bainner,#Bbinner,#Bcinner,#Bdinner,#Beinner,#Bfinner,#Bginner,#Bhinner,#Biinner,#Bjinner {
-  top: 20px;
-}
-#Caouter,#Cbouter,#Ccouter,#Cdouter,#Ceouter,#Cfouter,#Cgouter,#Chouter,#Ciouter,#Cjouter,#Cainner,#Cbinner,#Ccinner,#Cdinner,#Ceinner,#Cfinner,#Cginner,#Chinner,#Ciinner,#Cjinner {
-  top: 70px;
-}
-#Daouter,#Dbouter,#Dcouter,#Ddouter,#Deouter,#Dfouter,#Dgouter,#Dhouter,#Diouter,#Djouter,#Dainner,#Dbinner,#Dcinner,#Ddinner,#Deinner,#Dfinner,#Dginner,#Dhinner,#Diinner,#Djinner {
-  top: 120px;
-}
-#Eaouter,#Ebouter,#Ecouter,#Edouter,#Eeouter,#Efouter,#Egouter,#Ehouter,#Eiouter,#Ejouter,#Eainner,#Ebinner,#Ecinner,#Edinner,#Eeinner,#Efinner,#Eginner,#Ehinner,#Eiinner,#Ejinner {
-  top: 170px;
-}
-#Faouter,#Fbouter,#Fcouter,#Fdouter,#Feouter,#Ffouter,#Fgouter,#Fhouter,#Fiouter,#Fjouter,#Fainner,#Fbinner,#Fcinner,#Fdinner,#Feinner,#Ffinner,#Fginner,#Fhinner,#Fiinner,#Fjinner {
-  top: 220px;
-}
-#Gaouter,#Gbouter,#Gcouter,#Gdouter,#Geouter,#Gfouter,#Ggouter,#Ghouter,#Giouter,#Gjouter,#Gainner,#Gbinner,#Gcinner,#Gdinner,#Geinner,#Gfinner,#Gginner,#Ghinner,#Giinner,#Gjinner {
-  top: 270px;
-}
-#Haouter,#Hbouter,#Hcouter,#Hdouter,#Heouter,#Hfouter,#Hgouter,#Hhouter,#Hiouter,#Hjouter,#Hainner,#Hbinner,#Hcinner,#Hdinner,#Heinner,#Hfinner,#Hginner,#Hhinner,#Hiinner,#Hjinner {
-  top: 320px;
-}
-#Iaouter,#Ibouter,#Icouter,#Idouter,#Ieouter,#Ifouter,#Igouter,#Ihouter,#Iiouter,#Ijouter,#Iainner,#Ibinner,#Icinner,#Idinner,#Ieinner,#Ifinner,#Iginner,#Ihinner,#Iiinner,#Ijinner {
-  top: 370px;
-}
-
-
-#Aaouter, #Baouter, #Caouter, #Daouter, #Eaouter, #Faouter, #Gaouter, #Haouter, #Iaouter   { left: 0px;}
-#Abouter, #Bbouter, #Cbouter, #Dbouter, #Ebouter, #Fbouter, #Gbouter, #Hbouter, #Ibouter   { left: 50px;}
-#Acouter, #Bcouter, #Ccouter, #Dcouter, #Ecouter, #Fcouter, #Gcouter, #Hcouter, #Icouter   { left: 100px;}
-#Adouter, #Bdouter, #Cdouter, #Ddouter, #Edouter, #Fdouter, #Gdouter, #Hdouter, #Idouter   { left: 150px;}
-#Aeouter, #Beouter, #Ceouter, #Deouter, #Eeouter, #Feouter, #Geouter, #Heouter, #Ieouter   { left: 200px;}
-#Afouter, #Bfouter, #Cfouter, #Dfouter, #Efouter, #Ffouter, #Gfouter, #Hfouter, #Ifouter   { left: 275px;}
-#Agouter, #Bgouter, #Cgouter, #Dgouter, #Egouter, #Fgouter, #Ggouter, #Hgouter, #Igouter   { left: 325px;}
-#Ahouter, #Bhouter, #Chouter, #Dhouter, #Ehouter, #Fhouter, #Ghouter, #Hhouter, #Ihouter   { left: 375px;}
-#Aiouter, #Biouter, #Ciouter, #Diouter, #Eiouter, #Fiouter, #Giouter, #Hiouter, #Iiouter   { left: 425px;}
-#Ajouter, #Bjouter, #Cjouter, #Djouter, #Ejouter, #Fjouter, #Gjouter, #Hjouter, #Ijouter   { left: 475px;}
-#Aainner, #Bainner, #Cainner, #Dainner, #Eainner, #Fainner, #Gainner, #Hainner, #Iainner   { left: 25px;}
-#Abinner, #Bbinner, #Cbinner, #Dbinner, #Ebinner, #Fbinner, #Gbinner, #Hbinner, #Ibinner   { left: 75px;}
-#Acinner, #Bcinner, #Ccinner, #Dcinner, #Ecinner, #Fcinner, #Gcinner, #Hcinner, #Icinner   { left: 125px;}
-#Adinner, #Bdinner, #Cdinner, #Ddinner, #Edinner, #Fdinner, #Gdinner, #Hdinner, #Idinner   { left: 175px;}
-#Aeinner, #Beinner, #Ceinner, #Deinner, #Eeinner, #Feinner, #Geinner, #Heinner, #Ieinner   { left: 225px;}
-#Afinner, #Bfinner, #Cfinner, #Dfinner, #Efinner, #Ffinner, #Gfinner, #Hfinner, #Ifinner   { left: 250px;}
-#Aginner, #Bginner, #Cginner, #Dginner, #Eginner, #Fginner, #Gginner, #Hginner, #Iginner   { left: 300px;}
-#Ahinner, #Bhinner, #Chinner, #Dhinner, #Ehinner, #Fhinner, #Ghinner, #Hhinner, #Ihinner   { left: 350px;}
-#Aiinner, #Biinner, #Ciinner, #Diinner, #Eiinner, #Fiinner, #Giinner, #Hiinner, #Iiinner   { left: 400px;}
-#Ajinner, #Bjinner, #Cjinner, #Djinner, #Ejinner, #Fjinner, #Gjinner, #Hjinner, #Ijinner   { left: 450px;}
-
-#A1 {
-  left: 0;
-}
-#A2 {
-  left: 25px;
-}
-#A3 {
-  left: 50px;
-}
-#A4 {
-  left: 75px;
-}
-#A5 {
-  left: 100px;
-}
-#A6 {
-  left: 125px;
-}
-#A7 {
-  left: 150px;
-}
-#A8 {
-  left: 175px;
-}
-#A9 {
-  left: 200px;
-}
-#A10 {
-  left: 225px;
-}
-#A11 {
-  left: 275px;
-}
-#A12 {
-  left: 250px;
-}
-#A13 {
-  left: 325px;
-}
-#A14 {
-  left: 300px;
-}
-#A15 {
-  left: 375px;
-}
-#A16 {
-  left: 350px;
-}
-#A17 {
-  left: 425px;
-}
-#A18 {
-  left: 400px;
-}
-#A19 {
-  left: 475px;
-}
-#A20 {
-  left: 450px;
-}
 .colors {
   position: relative;
   float: right;
 }
 
 .labels {
-  transform: rotate(-90deg);
-  position: absolute;
+  font-size: 80%;
+  font-family: Arial;
+  float: right;
+  margin-right: 0.5em;
+}
+
+.labels svg {
   display: inline-block;
-  width: 100px;
-  top: -340px;
-  left: 255px;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-.color-row {
-  position: absolute;
-  margin-top: -30px;
+.labels span {
+  position: relative;
+  bottom: 16px;
 }
 
-.color-row svg {
-  position: absolute;
-  top: 15px;
-  left: 0;
-}
-
-.row1 li, .row2 li, .row3 li, .row4 li, .row5 li {
-  margin-bottom: 24px;
-}
-
-.row1 {
-  top: -10px;
-}
-.row2 {
-  top: 128px;
-}
-.row3 {
-  top: 266px;
-}
-.row4 {
-  top: 406px;
-}
-.row5 {
-  top: 544px;
-}
-
-svg {
-  display: block;
-}
 .block {
   height: 400px;
   width: 500px;
@@ -190,6 +39,50 @@ svg {
   height: 50px;
   width: 50px;
 }
+
+.colors {
+  display: block;
+  width: 55%;
+  float: right;
+  margin: 1em;
+/*  column-count: 5;
+  column-rule: none;*/
+}
+
+label {
+  float: right;
+  margin-right: 3em;
+}
+
+.neutral {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 1em;
+  height: 200px;
+}
+
+.matches {
+  float: left;
+  width: 48%;
+}
+
+#toPrint {
+  width: 45%;
+  margin: 1em;
+  column-count: 2;
+  column-rule: 1px solid #ddd;
+}
+
+#toPrint li {
+  margin: 0 0 0.5em 0;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* SCHEMATIC GRID */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
 /* ROWS */
 .A {
   top: 0;
@@ -216,7 +109,6 @@ svg {
   top: 350px;
 }
 /* COLUMNS */
-
 .a {
   left: 0;
 }
@@ -277,38 +169,76 @@ svg {
 .t {
   left: 450px;
 }
-.colors {
-  display: block;
-  width: 50%;
-  float: right;
-}
 
-label {
-  display: block;
-  margin-top: 2em;
-}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
-.neutral {
-  border: 1px solid #000;
+/* TOOLTIPS */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.hidden {
+  display: none;
+}
+.tooltip-wrap {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  margin: 10px;
+}
+.tooltip {
+  position: absolute;
+  z-index: 99;
+  padding: 0.3em;
+  font-family: Arial;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
   border-radius: 5px;
-  margin-top: 1em;
-  height: 200px;
 }
-
-.matches {
-  float: left;
-  width: 48%;
+#Aaouter,#Abouter,#Acouter,#Adouter,#Aeouter,#Afouter,#Agouter,#Ahouter,#Aiouter,#Ajouter,#Aainner,#Abinner,#Acinner,#Adinner,#Aeinner,#Afinner,#Aginner,#Ahinner,#Aiinner,#Ajinner {
+  top: -30px;
 }
-
-#toPrint {
-  width: 45%;
-  margin: 1em;
-  column-count: 2;
-  column-rule: 1px solid #ddd;
+#Baouter,#Bbouter,#Bcouter,#Bdouter,#Beouter,#Bfouter,#Bgouter,#Bhouter,#Biouter,#Bjouter,#Bainner,#Bbinner,#Bcinner,#Bdinner,#Beinner,#Bfinner,#Bginner,#Bhinner,#Biinner,#Bjinner {
+  top: 20px;
 }
-
-#toPrint li {
-  margin: 0 0 0.5em 0;
+#Caouter,#Cbouter,#Ccouter,#Cdouter,#Ceouter,#Cfouter,#Cgouter,#Chouter,#Ciouter,#Cjouter,#Cainner,#Cbinner,#Ccinner,#Cdinner,#Ceinner,#Cfinner,#Cginner,#Chinner,#Ciinner,#Cjinner {
+  top: 70px;
 }
-
+#Daouter,#Dbouter,#Dcouter,#Ddouter,#Deouter,#Dfouter,#Dgouter,#Dhouter,#Diouter,#Djouter,#Dainner,#Dbinner,#Dcinner,#Ddinner,#Deinner,#Dfinner,#Dginner,#Dhinner,#Diinner,#Djinner {
+  top: 120px;
+}
+#Eaouter,#Ebouter,#Ecouter,#Edouter,#Eeouter,#Efouter,#Egouter,#Ehouter,#Eiouter,#Ejouter,#Eainner,#Ebinner,#Ecinner,#Edinner,#Eeinner,#Efinner,#Eginner,#Ehinner,#Eiinner,#Ejinner {
+  top: 170px;
+}
+#Faouter,#Fbouter,#Fcouter,#Fdouter,#Feouter,#Ffouter,#Fgouter,#Fhouter,#Fiouter,#Fjouter,#Fainner,#Fbinner,#Fcinner,#Fdinner,#Feinner,#Ffinner,#Fginner,#Fhinner,#Fiinner,#Fjinner {
+  top: 220px;
+}
+#Gaouter,#Gbouter,#Gcouter,#Gdouter,#Geouter,#Gfouter,#Ggouter,#Ghouter,#Giouter,#Gjouter,#Gainner,#Gbinner,#Gcinner,#Gdinner,#Geinner,#Gfinner,#Gginner,#Ghinner,#Giinner,#Gjinner {
+  top: 270px;
+}
+#Haouter,#Hbouter,#Hcouter,#Hdouter,#Heouter,#Hfouter,#Hgouter,#Hhouter,#Hiouter,#Hjouter,#Hainner,#Hbinner,#Hcinner,#Hdinner,#Heinner,#Hfinner,#Hginner,#Hhinner,#Hiinner,#Hjinner {
+  top: 320px;
+}
+#Iaouter,#Ibouter,#Icouter,#Idouter,#Ieouter,#Ifouter,#Igouter,#Ihouter,#Iiouter,#Ijouter,#Iainner,#Ibinner,#Icinner,#Idinner,#Ieinner,#Ifinner,#Iginner,#Ihinner,#Iiinner,#Ijinner {
+  top: 370px;
+}
+#Aaouter, #Baouter, #Caouter, #Daouter, #Eaouter, #Faouter, #Gaouter, #Haouter, #Iaouter   { left: 0px;}
+#Abouter, #Bbouter, #Cbouter, #Dbouter, #Ebouter, #Fbouter, #Gbouter, #Hbouter, #Ibouter   { left: 50px;}
+#Acouter, #Bcouter, #Ccouter, #Dcouter, #Ecouter, #Fcouter, #Gcouter, #Hcouter, #Icouter   { left: 100px;}
+#Adouter, #Bdouter, #Cdouter, #Ddouter, #Edouter, #Fdouter, #Gdouter, #Hdouter, #Idouter   { left: 150px;}
+#Aeouter, #Beouter, #Ceouter, #Deouter, #Eeouter, #Feouter, #Geouter, #Heouter, #Ieouter   { left: 200px;}
+#Afouter, #Bfouter, #Cfouter, #Dfouter, #Efouter, #Ffouter, #Gfouter, #Hfouter, #Ifouter   { left: 275px;}
+#Agouter, #Bgouter, #Cgouter, #Dgouter, #Egouter, #Fgouter, #Ggouter, #Hgouter, #Igouter   { left: 325px;}
+#Ahouter, #Bhouter, #Chouter, #Dhouter, #Ehouter, #Fhouter, #Ghouter, #Hhouter, #Ihouter   { left: 375px;}
+#Aiouter, #Biouter, #Ciouter, #Diouter, #Eiouter, #Fiouter, #Giouter, #Hiouter, #Iiouter   { left: 425px;}
+#Ajouter, #Bjouter, #Cjouter, #Djouter, #Ejouter, #Fjouter, #Gjouter, #Hjouter, #Ijouter   { left: 475px;}
+#Aainner, #Bainner, #Cainner, #Dainner, #Eainner, #Fainner, #Gainner, #Hainner, #Iainner   { left: 25px;}
+#Abinner, #Bbinner, #Cbinner, #Dbinner, #Ebinner, #Fbinner, #Gbinner, #Hbinner, #Ibinner   { left: 75px;}
+#Acinner, #Bcinner, #Ccinner, #Dcinner, #Ecinner, #Fcinner, #Gcinner, #Hcinner, #Icinner   { left: 125px;}
+#Adinner, #Bdinner, #Cdinner, #Ddinner, #Edinner, #Fdinner, #Gdinner, #Hdinner, #Idinner   { left: 175px;}
+#Aeinner, #Beinner, #Ceinner, #Deinner, #Eeinner, #Feinner, #Geinner, #Heinner, #Ieinner   { left: 225px;}
+#Afinner, #Bfinner, #Cfinner, #Dfinner, #Efinner, #Ffinner, #Gfinner, #Hfinner, #Ifinner   { left: 250px;}
+#Aginner, #Bginner, #Cginner, #Dginner, #Eginner, #Fginner, #Gginner, #Hginner, #Iginner   { left: 300px;}
+#Ahinner, #Bhinner, #Chinner, #Dhinner, #Ehinner, #Fhinner, #Ghinner, #Hhinner, #Ihinner   { left: 350px;}
+#Aiinner, #Biinner, #Ciinner, #Diinner, #Eiinner, #Fiinner, #Giinner, #Hiinner, #Iiinner   { left: 400px;}
+#Ajinner, #Bjinner, #Cjinner, #Djinner, #Ejinner, #Fjinner, #Gjinner, #Hjinner, #Ijinner   { left: 450px;}
 }
