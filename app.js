@@ -134,7 +134,7 @@ var neutralsIndex = {
       colorNamePairs.push(colorPair);
       colorPair = {};
     })
-    console.log(colorNamePairs);
+    // console.log(colorNamePairs);
     return colorNamePairs;
   }
 
@@ -144,9 +144,7 @@ var neutralsIndex = {
     var fillPair = {};
     $(".block svg").each(function(i) {
       var outerFill = $(this).children(".outer").attr("fill");
-      // var outerColor = getKeyByValue(colorIndex, outerFill);
       var innerFill = $(this).children(".inner").attr("fill");
-      // var innerColor = getKeyByValue(colorIndex, innerFill);
       fillPair.outer = outerFill;
       fillPair.inner = innerFill;
 
@@ -162,7 +160,7 @@ var neutralsIndex = {
       fillNumberPairs.push(fillPair);
       fillPair = {};
     })
-    console.log(fillNumberPairs);
+    // console.log(fillNumberPairs);
     return fillNumberPairs;
   }
 
@@ -174,13 +172,139 @@ var neutralsIndex = {
     };
   }
 
+  function getArrayDuplicates(arr, option) {
+    var duplicates = {};
+    if (option === "color") {
+      console.log('color');
+      for (var i = 0; i < arr.length; i++) {
+        if (duplicates.hasOwnProperty(arr[i].color)) {
+          duplicates[arr[i].color].push(i);
+        } else if (arr.lastIndexOf(arr[i].color) !== i) {
+          duplicates[arr[i].color] = [i];
+        }
+      }
+      return duplicates;
+    } else if (option === "fill") {
+      console.log('fill');
+      for (var i = 0; i < arr.length; i++) {
+        if (duplicates.hasOwnProperty(arr[i].fill)) {
+          duplicates[arr[i].fill].push(i);
+        } else if (arr.lastIndexOf(arr[i].fill) !== i) {
+          duplicates[arr[i].fill] = [i];
+        }
+      }
+      return duplicates;
+    } else if (option === "neutral") {
+      console.log('neutral');
+      for (var i = 0; i < arr.length; i++) {
+        if (duplicates.hasOwnProperty(arr[i].neutral)) {
+          duplicates[arr[i].neutral].push(i);
+        } else if (arr.lastIndexOf(arr[i].neutral) !== i) {
+          duplicates[arr[i].neutral] = [i];
+        }
+      }
+      return duplicates;
+    } else {
+      return duplicates;
+    }
+    // ["abc","def","abc"].getDuplicates() -> { "abc": [0, 2] }
+  }
+
+  function compareObjects(neutralIndeces,fillIndeces) {
+    var match = true;
+    // console.log(fillIndeces);
+    // console.log(neutralIndeces);
+    // for each item in fillIndeces, are the indeces included in any of the neutralIndeces items?
+    var fillKeys = Object.keys(fillIndeces);
+    console.log(fillKeys);
+    var indeces = [];
+    for (var i = 0; i < fillKeys.length; i++) {
+      console.log("i: " + i);
+      console.log(fillIndeces[fillKeys[i]]);
+      var fillLocs = fillIndeces[fillKeys[i]];
+      for (var k = 0; k < fillLocs.length; k++) {
+        console.log(fillLocs[k]);
+        if (neutralIndeces.hasOwnProperty(fillLocs[k])) {
+          console.log('we have a match');
+        }
+      };
+      // var firstOne = indeces[0];
+      
+    }
+    // console.log(indeces);
+    // console.log(indeces);
+    // indeces = [];
+    // console.log(match);
+    // return match;
+  }
+
+
+
+
 
   function checkForNeutralPairs() {
     logColors();
-    var colorsByBlock = mapBlocksByColorName();
+    // console.log(colorsInUse);
+    var colorsByBlock = mapBlocksByFillNumber();
+    // console.log(colorsByBlock);
+    // gives an array of these: {outer: "#fcfbf2", inner: "#fcfbf2", neutral: "#fcfbf2", fill: "#fcfbf2"}
+    // 
+    var colorList = [];
+    var neutralList = [];
     for (var i = 0; i < colorsByBlock.length; i++) {
-      console.log(colorsByBlock[i]);
+      // console.log(colorsByBlock[i]);
+      colorList.push(colorsByBlock[i].fill);
+      neutralList.push(colorsByBlock[i].neutral);
     };
+    // console.log(colorList);
+    // console.log(neutralList);
+    var colorIndexPairs = getArrayDuplicates(colorsByBlock, "fill");
+    console.log(colorIndexPairs);
+    var neutralIndexPairs = getArrayDuplicates(colorsByBlock, "neutral");
+    console.log(neutralIndexPairs);
+
+    // function that takes two arrays 
+    // does the neutral location array contain all the values of the fill location array
+
+    compareObjects(neutralIndexPairs, colorIndexPairs);
+
+
+
+    // var colorsByBlock = mapBlocksByColorName();
+    // // console.log(colorsByBlock);
+    // var colorList = [];
+    // var neutralList = [];
+    // for (var i = 0; i < colorsByBlock.length; i++) {
+    //   // console.log(colorsByBlock[i]);
+    //   colorList.push(colorsByBlock[i].color);
+    //   neutralList.push(colorsByBlock[i].neutral);
+    // };
+    // // console.log(colorList);
+    // // console.log(neutralList);
+    // var colorLocations = getArrayDuplicates(colorList, "color");
+    // var neutralLocations = getArrayDuplicates(neutralList, "neutral");
+    // // colors that are only used once do not get into colorLocations or neutralLocations
+    // console.log(colorLocations);
+    // console.log(neutralLocations);
+    // var colorKeys = Object.keys(colorLocations);
+    // var neutralKeys = Object.keys(neutralLocations);
+    // console.log(colorKeys);
+    // console.log(neutralKeys);
+    // for (var i = 0; i < colorKeys.length; i++) {
+    //   // console.log(i);
+    //   var arr = colorLocations[colorKeys[i]];
+    //   for (var k = 0; k < arr.length; k++) {
+    //     // console.log(arr);
+    //     console.log(arr[k]);
+    //     console.log(neutralKeys[arr[k]]);
+    //   };
+      
+    //   // console.log(arr[i+1]);
+    //   // console.log(arr[i+2]);
+    //   // console.log(neutralList[colorLocations[colorKeys[i][i]]]);
+    // };
+    
+
   };
 
 
@@ -200,7 +324,7 @@ var neutralsIndex = {
     neutralNames = [];
     var neutrals = Object.values(neutralsIndex);
     for (var i = 0; i < neutrals.length; i++) {
-      console.log(neutrals[i].name);
+      // console.log(neutrals[i].name);
       neutralNames.push(neutrals[i].name);
     };
     return neutralNames;
@@ -285,7 +409,7 @@ var neutralsIndex = {
     chosenLabel = $(this).attr("id");
     $(".chosenLabel").text(chosenLabel);
     $(".chosenColor").attr("fill", chosenColor);
-    console.log('you chose ' + chosenLabel);
+    // console.log('you chose ' + chosenLabel);
   })
   $(".piece").on("click", function() {
     var performFill = checkUsage(chosenColor);
