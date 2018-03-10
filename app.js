@@ -175,7 +175,8 @@ var neutralsIndex = {
   function getArrayDuplicates(arr, option) {
     var duplicates = {};
     if (option === "color") {
-      console.log('color');
+      // console.log('color');
+      // console.log(arr);
       for (var i = 0; i < arr.length; i++) {
         if (duplicates.hasOwnProperty(arr[i].color)) {
           duplicates[arr[i].color].push(i);
@@ -185,7 +186,7 @@ var neutralsIndex = {
       }
       return duplicates;
     } else if (option === "fill") {
-      console.log('fill');
+      // console.log('fill');
       for (var i = 0; i < arr.length; i++) {
         if (duplicates.hasOwnProperty(arr[i].fill)) {
           duplicates[arr[i].fill].push(i);
@@ -195,7 +196,7 @@ var neutralsIndex = {
       }
       return duplicates;
     } else if (option === "neutral") {
-      console.log('neutral');
+      // console.log('neutral');
       for (var i = 0; i < arr.length; i++) {
         if (duplicates.hasOwnProperty(arr[i].neutral)) {
           duplicates[arr[i].neutral].push(i);
@@ -211,23 +212,46 @@ var neutralsIndex = {
   }
 
   function compareObjects(neutralIndeces,fillIndeces) {
-    var match = true;
-    // console.log(fillIndeces);
+    // var match = true;
+    var indeces = [];
+    console.log(fillIndeces);
     // console.log(neutralIndeces);
     // for each item in fillIndeces, are the indeces included in any of the neutralIndeces items?
     var fillKeys = Object.keys(fillIndeces);
+    var neutralKeys = Object.keys(neutralIndeces);
     console.log(fillKeys);
-    var indeces = [];
+    console.log(neutralKeys);
+    
     for (var i = 0; i < fillKeys.length; i++) {
-      console.log("i: " + i);
-      console.log(fillIndeces[fillKeys[i]]);
-      var fillLocs = fillIndeces[fillKeys[i]];
-      for (var k = 0; k < fillLocs.length; k++) {
-        console.log(fillLocs[k]);
-        if (neutralIndeces.hasOwnProperty(fillLocs[k])) {
-          console.log('we have a match');
-        }
+      console.log("indeces for " + fillKeys[i]);
+      console.dir(fillIndeces[fillKeys[i]]);
+      // console.log(fillIndeces.length);
+      var j = 0;
+      for (var location in fillIndeces) {
+        if (j < 2) {
+          console.log(fillIndeces[fillKeys[i]][j]);
+          indeces.push(fillIndeces[fillKeys[i]][j]);
+        } else {break}
+        j = j + 1;
+        console.log(indeces);
       };
+      indeces = [];
+      console.log(indeces);
+
+      var k = 0;
+      for (var index in fillIndeces[fillKeys[i]]) {
+        console.log(index[k]);
+        k = k + 1;
+      }
+      // console.dir(fillIndeces[][0]);
+
+      // var fillLocs = fillIndeces[fillKeys[i]];
+      // for (var k = 0; k < fillLocs.length; k++) {
+      //   console.log(fillLocs[k]);
+      //   if (neutralIndeces.hasOwnProperty(fillLocs[k])) {
+      //     console.log('we have a match');
+      //   }
+      // };
       // var firstOne = indeces[0];
       
     }
@@ -245,26 +269,27 @@ var neutralsIndex = {
   function checkForNeutralPairs() {
     logColors();
     // console.log(colorsInUse);
-    var colorsByBlock = mapBlocksByFillNumber();
+    var colorsByBlock = mapBlocksByColorName();
     // console.log(colorsByBlock);
     // gives an array of these: {outer: "#fcfbf2", inner: "#fcfbf2", neutral: "#fcfbf2", fill: "#fcfbf2"}
     // 
-    var colorList = [];
-    var neutralList = [];
-    for (var i = 0; i < colorsByBlock.length; i++) {
-      // console.log(colorsByBlock[i]);
-      colorList.push(colorsByBlock[i].fill);
-      neutralList.push(colorsByBlock[i].neutral);
-    };
+    // var colorList = [];
+    // var neutralList = [];
+    // for (var i = 0; i < colorsByBlock.length; i++) {
+    //   // console.log(colorsByBlock[i]);
+    //   colorList.push(colorsByBlock[i].color);
+    //   neutralList.push(colorsByBlock[i].neutral);
+    // };
     // console.log(colorList);
     // console.log(neutralList);
-    var colorIndexPairs = getArrayDuplicates(colorsByBlock, "fill");
+    
+    var colorIndexPairs = getArrayDuplicates(colorsByBlock, "color");
     console.log(colorIndexPairs);
     var neutralIndexPairs = getArrayDuplicates(colorsByBlock, "neutral");
     console.log(neutralIndexPairs);
 
-    // function that takes two arrays 
-    // does the neutral location array contain all the values of the fill location array
+    // function that takes two objects 
+    // does the neutral location obj contain all the values of the fill location obj
 
     compareObjects(neutralIndexPairs, colorIndexPairs);
 
