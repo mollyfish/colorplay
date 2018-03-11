@@ -5,9 +5,9 @@
   .tooltip {
     display: none;
   }
-  /*.quilt {
+  label {
     display: none;
-  }*/
+  }
   #toPrint {
     font-size: 130%;
     list-style: none;
