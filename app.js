@@ -104,6 +104,7 @@ var neutralsIndex = {
   var showColors;
   var neutralNames;
   var neutralFills;
+  var matches = [];
 
   function logColors() {
     colorsInUse = [];
@@ -176,7 +177,6 @@ var neutralsIndex = {
     var duplicates = {};
     if (option === "color") {
       // console.log('color');
-      // console.log(arr);
       for (var i = 0; i < arr.length; i++) {
         if (duplicates.hasOwnProperty(arr[i].color)) {
           duplicates[arr[i].color].push(i);
@@ -208,128 +208,137 @@ var neutralsIndex = {
     } else {
       return duplicates;
     }
-    // ["abc","def","abc"].getDuplicates() -> { "abc": [0, 2] }
   }
 
   function compareObjects(neutralIndeces,fillIndeces) {
-    // var match = true;
-    var indeces = [];
-    console.log(fillIndeces);
-    // console.log(neutralIndeces);
     // for each item in fillIndeces, are the indeces included in any of the neutralIndeces items?
+
+    var indeces = [];    
     var fillKeys = Object.keys(fillIndeces);
     var neutralKeys = Object.keys(neutralIndeces);
-    console.log(fillKeys);
-    console.log(neutralKeys);
+
     
     for (var i = 0; i < fillKeys.length; i++) {
       console.log("indeces for " + fillKeys[i]);
-      console.dir(fillIndeces[fillKeys[i]]);
-      // console.log(fillIndeces.length);
+      console.log("i: " + i);
+      indeces.push(fillKeys[i]);
       var j = 0;
       for (var location in fillIndeces) {
+        
+        console.log("j: " + j);
+        console.log(indeces);
+        console.log(fillKeys[i])
         if (j < 2) {
-          console.log(fillIndeces[fillKeys[i]][j]);
-          indeces.push(fillIndeces[fillKeys[i]][j]);
+          if (fillIndeces[fillKeys[i]][j] != undefined) {
+            indeces.push(fillIndeces[fillKeys[i]][j]);
+          }
         } else {break}
         j = j + 1;
-        console.log(indeces);
       };
-      indeces = [];
-      console.log(indeces);
-
-      var k = 0;
-      for (var index in fillIndeces[fillKeys[i]]) {
-        console.log(index[k]);
-        k = k + 1;
-      }
-      // console.dir(fillIndeces[][0]);
-
-      // var fillLocs = fillIndeces[fillKeys[i]];
-      // for (var k = 0; k < fillLocs.length; k++) {
-      //   console.log(fillLocs[k]);
-      //   if (neutralIndeces.hasOwnProperty(fillLocs[k])) {
-      //     console.log('we have a match');
-      //   }
-      // };
-      // var firstOne = indeces[0];
+  
+      var includesFirstIndex = false;
+      var includesSecondIndex = false;
       
+      var matchFound = false;
+      var m = 0;
+      for(var neutral in neutralIndeces) {
+        console.log("length: " + indeces.length);
+        if (indeces.length > 1) {
+          console.log(neutralIndeces[neutralKeys[m]]);
+          console.log(indeces);
+          includesFirstIndex = neutralIndeces[neutralKeys[m]].includes(indeces[1]);
+          if (includesFirstIndex) {
+            includesSecondIndex = neutralIndeces[neutralKeys[m]].includes(indeces[2]);
+          }
+          m = m + 1;
+          if (includesFirstIndex && includesSecondIndex) {
+              // console.log("Found both blocks, neutrals MATCH");
+              // var colorName = ;
+              var obj = {};
+              obj[indeces[0]] = 1;
+              matches.push(obj);
+              matchFound = true;
+              break;
+          } else {
+            // console.log("Found both blocks, neutrals DO NOT match");
+            match = false;
+          }
+        }
+      }
+      
+      if (!matchFound) {
+        var obj = {};
+        obj[indeces[0]] = 0;
+        matches.push(obj);
+      }
+    
+      indeces = [];
     }
-    // console.log(indeces);
-    // console.log(indeces);
-    // indeces = [];
-    // console.log(match);
-    // return match;
+    return matches;
   }
-
-
-
-
 
   function checkForNeutralPairs() {
     logColors();
-    // console.log(colorsInUse);
     var colorsByBlock = mapBlocksByColorName();
-    // console.log(colorsByBlock);
-    // gives an array of these: {outer: "#fcfbf2", inner: "#fcfbf2", neutral: "#fcfbf2", fill: "#fcfbf2"}
-    // 
-    // var colorList = [];
-    // var neutralList = [];
-    // for (var i = 0; i < colorsByBlock.length; i++) {
-    //   // console.log(colorsByBlock[i]);
-    //   colorList.push(colorsByBlock[i].color);
-    //   neutralList.push(colorsByBlock[i].neutral);
-    // };
-    // console.log(colorList);
-    // console.log(neutralList);
     
     var colorIndexPairs = getArrayDuplicates(colorsByBlock, "color");
-    console.log(colorIndexPairs);
+    // console.log(colorIndexPairs);
     var neutralIndexPairs = getArrayDuplicates(colorsByBlock, "neutral");
-    console.log(neutralIndexPairs);
+    // console.log(neutralIndexPairs);
 
-    // function that takes two objects 
-    // does the neutral location obj contain all the values of the fill location obj
+    // var colorIndexPairs = {
+    //   Apricot: [23, 56],
+    //   Asparagus: [4, 75],
+    //   Autumn: [36, 43],
+    //   Baltic: [28, 51],
+    //   Brown: [8, 71],
+    //   Burst: [33, 46],
+    //   Cactus: [21, 58],
+    //   Cadet: [17, 62],
+    //   Canyon: [29, 50],
+    //   Caribbean_Sea: [3, 76],
+    //   Chocolate: [19, 60],
+    //   Chona_Brown: [9, 70],
+    //   Cloud: [13, 66],
+    //   Fern:[34],
+    //   Flamingo: [25, 54],
+    //   Garden:[44],
+    //   Jade: [30, 49],
+    //   Jungle: [39, 40],
+    //   Kumquat: [15, 64],
+    //   Licorice: [20, 59],
+    //   Light_Jade: [22, 57],
+    //   Macaw: [31, 48],
+    //   Malachite: [38, 41],
+    //   Manatee: [10, 69],
+    //   Mango: [24, 55],
+    //   Mesa: [14, 65],
+    //   Oak: [18, 61],
+    //   Olive:[45],
+    //   Pomegranate: [32, 47],
+    //   Reef: [16, 63],
+    //   Sap:[35],
+    //   Seaweed: [6, 73],
+    //   Serpent: [27, 52],
+    //   Shadow: [1, 78],
+    //   Silver: [2, 77],
+    //   Sky: [12, 67],
+    //   Slate_gray: [11, 68],
+    //   Sunset: [26, 53],
+    //   Tropical: [37, 42],
+    //   Tweed: [7, 72],
+    //   Velvet: [5, 74],
+    //   Vino: [0, 79],
+    // }
 
-    compareObjects(neutralIndexPairs, colorIndexPairs);
+    // var neutralIndexPairs = {
+    //   Chamois:[11, 29, 50, 68],
+    //   Mist:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 56, 57, 58, 59, 60, 61, 62, 64, 65, 66, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79],
+    //   Shell:[16, 24, 55, 63]
+    // }
 
-
-
-    // var colorsByBlock = mapBlocksByColorName();
-    // // console.log(colorsByBlock);
-    // var colorList = [];
-    // var neutralList = [];
-    // for (var i = 0; i < colorsByBlock.length; i++) {
-    //   // console.log(colorsByBlock[i]);
-    //   colorList.push(colorsByBlock[i].color);
-    //   neutralList.push(colorsByBlock[i].neutral);
-    // };
-    // // console.log(colorList);
-    // // console.log(neutralList);
-    // var colorLocations = getArrayDuplicates(colorList, "color");
-    // var neutralLocations = getArrayDuplicates(neutralList, "neutral");
-    // // colors that are only used once do not get into colorLocations or neutralLocations
-    // console.log(colorLocations);
-    // console.log(neutralLocations);
-    // var colorKeys = Object.keys(colorLocations);
-    // var neutralKeys = Object.keys(neutralLocations);
-    // console.log(colorKeys);
-    // console.log(neutralKeys);
-    // for (var i = 0; i < colorKeys.length; i++) {
-    //   // console.log(i);
-    //   var arr = colorLocations[colorKeys[i]];
-    //   for (var k = 0; k < arr.length; k++) {
-    //     // console.log(arr);
-    //     console.log(arr[k]);
-    //     console.log(neutralKeys[arr[k]]);
-    //   };
-      
-    //   // console.log(arr[i+1]);
-    //   // console.log(arr[i+2]);
-    //   // console.log(neutralList[colorLocations[colorKeys[i][i]]]);
-    // };
-    
-
+    var matchCheck = compareObjects(neutralIndexPairs, colorIndexPairs);
+    console.log(matchCheck);
   };
 
 
@@ -349,7 +358,6 @@ var neutralsIndex = {
     neutralNames = [];
     var neutrals = Object.values(neutralsIndex);
     for (var i = 0; i < neutrals.length; i++) {
-      // console.log(neutrals[i].name);
       neutralNames.push(neutrals[i].name);
     };
     return neutralNames;
