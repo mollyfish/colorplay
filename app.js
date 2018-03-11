@@ -104,7 +104,7 @@ var neutralsIndex = {
   var showColors;
   var neutralNames;
   var neutralFills;
-  var matches = [];
+  var matches = {};
 
   function logColors() {
     colorsInUse = [];
@@ -167,10 +167,153 @@ var neutralsIndex = {
 
   function displayColors() {
     logColors();
+    var neutralCheck = checkForNeutralPairs();
     var colorsByBlock = mapBlocksByColorName();
+
+    // var neutralCheck = {
+    //   Asparagus:1,
+    //   Autumn:0,
+    //   Baltic:1,
+    //   Brass:1,
+    //   Brown:1,
+    //   Cactus:1,
+    //   Cadet:1,
+    //   Camel:1,
+    //   Caribbean_Sea:1,
+    //   Cherry:1,
+    //   Clay:1,
+    //   Cloud:1,
+    //   Cosmic_Blue:1,
+    //   Denim:1,
+    //   Desert:1,
+    //   Dogwood:1,
+    //   Flamingo:0,
+    //   Freedom_Blue:1,
+    //   Jade:1,
+    //   Jungle:1,
+    //   Kumquat:0,
+    //   Licorice:1,
+    //   Light_Jade:1,
+    //   Macaw:1,
+    //   Malachite:1,
+    //   Manatee:1,
+    //   Mineral:1,
+    //   Orange:0,
+    //   Petunia:1,
+    //   Reef:1,
+    //   Sand_Dune:1,
+    //   Serpent:1,
+    //   Shadow:1,
+    //   Silver:1,
+    //   Sky:1,
+    //   Slate_gray:1,
+    //   Sycamore:1,
+    //   Tart:1,
+    //   Terra:1,
+    //   Thistle:1,
+    //   Tweed:1,
+    //   Vino:1
+    // }
+
+    // var colorsByBlock = [
+    //   {outer: "Licorice", inner: "Mist", neutral: "Mist", color: "Licorice"},
+    //   {outer: "Mist", inner: "Slate_gray", neutral: "Mist", color: "Slate_gray"},
+    //   {outer: "Shadow", inner: "Mist", neutral: "Mist", color: "Shadow"},
+    //   {outer: "Mist", inner: "Light_Jade", neutral: "Mist", color: "Light_Jade"},
+    //   {outer: "Cactus", inner: "Mist", neutral: "Mist", color: "Cactus"},
+    //   {outer: "Macaw", inner: "Mist", neutral: "Mist", color: "Macaw"},
+    //   {outer: "Mist", inner: "Jade", neutral: "Mist", color: "Jade"},
+    //   {outer: "Brass", inner: "Mist", neutral: "Mist", color: "Brass"},
+    //   {outer: "Mist", inner: "Desert", neutral: "Mist", color: "Desert"},
+    //   {outer: "Terra", inner: "Chamois", neutral: "Chamois", color: "Terra"},
+    //   {outer: "Mist", inner: "Vino", neutral: "Mist", color: "Vino"},
+    //   {outer: "Manatee", inner: "Mist", neutral: "Mist", color: "Manatee"},
+    //   {outer: "Mist", inner: "Cloud", neutral: "Mist", color: "Cloud"},
+    //   {outer: "Sky", inner: "Shell", neutral: "Shell", color: "Sky"},
+    //   {outer: "Mist", inner: "Cherry", neutral: "Mist", color: "Cherry"},
+    //   {outer: "Shell", inner: "Camel", neutral: "Shell", color: "Camel"},
+    //   {outer: "Jungle", inner: "Mist", neutral: "Mist", color: "Jungle"},
+    //   {outer: "Mist", inner: "Malachite", neutral: "Mist", color: "Malachite"},
+    //   {outer: "Dogwood", inner: "Mist", neutral: "Mist", color: "Dogwood"},
+    //   {outer: "Mist", inner: "Sand_Dune", neutral: "Mist", color: "Sand_Dune"},
+    //   {outer: "Sycamore", inner: "Mist", neutral: "Mist", color: "Sycamore"},
+    //   {outer: "Mist", inner: "Asparagus", neutral: "Mist", color: "Asparagus"},
+    //   {outer: "Caribbean_Sea", inner: "Mist", neutral: "Mist", color: "Caribbean_Sea"},
+    //   {outer: "Mist", inner: "Thistle", neutral: "Mist", color: "Thistle"},
+    //   {outer: "Clay", inner: "Mist", neutral: "Mist", color: "Clay"},
+    //   {outer: "Mineral", inner: "Mist", neutral: "Mist", color: "Mineral"},
+    //   {outer: "Mist", inner: "Denim", neutral: "Mist", color: "Denim"},
+    //   {outer: "Baltic", inner: "Mist", neutral: "Mist", color: "Baltic"},
+    //   {outer: "Chamois", inner: "Serpent", neutral: "Chamois", color: "Serpent"},
+    //   {outer: "Silver", inner: "Mist", neutral: "Mist", color: "Silver"},
+    //   {outer: "Mist", inner: "Brown", neutral: "Mist", color: "Brown"},
+    //   {outer: "Tweed", inner: "Mist", neutral: "Mist", color: "Tweed"},
+    //   {outer: "Mist", inner: "Tart", neutral: "Mist", color: "Tart"},
+    //   {outer: "Petunia", inner: "Mist", neutral: "Mist", color: "Petunia"},
+    //   {outer: "Shell", inner: "Orange", neutral: "Shell", color: "Orange"},
+    //   {outer: "Mist", inner: "Kumquat", neutral: "Mist", color: "Kumquat"},
+    //   {outer: "Freedom_Blue", inner: "Mist", neutral: "Mist", color: "Freedom_Blue"},
+    //   {outer: "Mist", inner: "Cosmic_Blue", neutral: "Mist", color: "Cosmic_Blue"},
+    //   {outer: "Cadet", inner: "Mist", neutral: "Mist", color: "Cadet"},
+    //   {outer: "Mist", inner: "Reef", neutral: "Mist", color: "Reef"},
+    //   {outer: "Mist", inner: "Reef", neutral: "Mist", color: "Reef"},
+    //   {outer: "Cadet", inner: "Mist", neutral: "Mist", color: "Cadet"},
+    //   {outer: "Mist", inner: "Cosmic_Blue", neutral: "Mist", color: "Cosmic_Blue"},
+    //   {outer: "Freedom_Blue", inner: "Mist", neutral: "Mist", color: "Freedom_Blue"},
+    //   {outer: "Shell", inner: "Autumn", neutral: "Shell", color: "Autumn"},
+    //   {outer: "Mist", inner: "Flamingo", neutral: "Mist", color: "Flamingo"},
+    //   {outer: "Petunia", inner: "Mist", neutral: "Mist", color: "Petunia"},
+    //   {outer: "Mist", inner: "Tart", neutral: "Mist", color: "Tart"},
+    //   {outer: "Tweed", inner: "Mist", neutral: "Mist", color: "Tweed"},
+    //   {outer: "Mist", inner: "Brown", neutral: "Mist", color: "Brown"},
+    //   {outer: "Silver", inner: "Mist", neutral: "Mist", color: "Silver"},
+    //   {outer: "Chamois", inner: "Serpent", neutral: "Chamois", color: "Serpent"},
+    //   {outer: "Baltic", inner: "Mist", neutral: "Mist", color: "Baltic"},
+    //   {outer: "Mist", inner: "Denim", neutral: "Mist", color: "Denim"},
+    //   {outer: "Mineral", inner: "Mist", neutral: "Mist", color: "Mineral"},
+    //   {outer: "Clay", inner: "Mist", neutral: "Mist", color: "Clay"},
+    //   {outer: "Mist", inner: "Thistle", neutral: "Mist", color: "Thistle"},
+    //   {outer: "Caribbean_Sea", inner: "Mist", neutral: "Mist", color: "Caribbean_Sea"},
+    //   {outer: "Mist", inner: "Asparagus", neutral: "Mist", color: "Asparagus"},
+    //   {outer: "Sycamore", inner: "Mist", neutral: "Mist", color: "Sycamore"},
+    //   {outer: "Mist", inner: "Sand_Dune", neutral: "Mist", color: "Sand_Dune"},
+    //   {outer: "Dogwood", inner: "Mist", neutral: "Mist", color: "Dogwood"},
+    //   {outer: "Mist", inner: "Malachite", neutral: "Mist", color: "Malachite"},
+    //   {outer: "Jungle", inner: "Mist", neutral: "Mist", color: "Jungle"},
+    //   {outer: "Shell", inner: "Camel", neutral: "Shell", color: "Camel"},
+    //   {outer: "Mist", inner: "Cherry", neutral: "Mist", color: "Cherry"},
+    //   {outer: "Sky", inner: "Shell", neutral: "Shell", color: "Sky"},
+    //   {outer: "Mist", inner: "Cloud", neutral: "Mist", color: "Cloud"},
+    //   {outer: "Manatee", inner: "Mist", neutral: "Mist", color: "Manatee"},
+    //   {outer: "Mist", inner: "Vino", neutral: "Mist", color: "Vino"},
+    //   {outer: "Terra", inner: "Chamois", neutral: "Chamois", color: "Terra"},
+    //   {outer: "Mist", inner: "Desert", neutral: "Mist", color: "Desert"},
+    //   {outer: "Brass", inner: "Mist", neutral: "Mist", color: "Brass"},
+    //   {outer: "Mist", inner: "Jade", neutral: "Mist", color: "Jade"},
+    //   {outer: "Macaw", inner: "Mist", neutral: "Mist", color: "Macaw"},
+    //   {outer: "Cactus", inner: "Mist", neutral: "Mist", color: "Cactus"},
+    //   {outer: "Mist", inner: "Light_Jade", neutral: "Mist", color: "Light_Jade"},
+    //   {outer: "Shadow", inner: "Mist", neutral: "Mist", color: "Shadow"},
+    //   {outer: "Mist", inner: "Slate_gray", neutral: "Mist", color: "Slate_gray"},
+    //   {outer: "Licorice", inner: "Mist", neutral: "Mist", color: "Licorice"}
+    // ]
+
+    // console.log(colorsByBlock);
+    // console.log(neutralCheck);
+    var asterisk = "";
+    var misMatches;
     for (var i = 0; i < colorsByBlock.length; i++) {
-      $("#toPrint").append("<li>"+ (i + 1) + ": " + colorsByBlock[i].outer + " / " + colorsByBlock[i].inner + "</li>");
+      console.log("---------------------------------");
+      if (neutralCheck[colorsByBlock[i].color] === 0) {
+        asterisk = "*";
+        misMatches = true;
+      }
+      $("#toPrint").append("<li>" + (i + 1) + ": " + colorsByBlock[i].outer + " / " + colorsByBlock[i].inner + asterisk + "</li>");
+      asterisk = "";   
     };
+    if (misMatches) {
+      $("#toPrint").append("<li>* These blocks cannot be assembled using the face-to-face half-square triangle technique; you must cut the triangles and then assemble the block.</li>");
+    }
   }
 
   function getArrayDuplicates(arr, option) {
@@ -253,10 +396,7 @@ var neutralsIndex = {
           m = m + 1;
           if (includesFirstIndex && includesSecondIndex) {
               // console.log("Found both blocks, neutrals MATCH");
-              // var colorName = ;
-              var obj = {};
-              obj[indeces[0]] = 1;
-              matches.push(obj);
+              matches[indeces[0]] = 1;
               matchFound = true;
               break;
           } else {
@@ -267,13 +407,12 @@ var neutralsIndex = {
       }
       
       if (!matchFound) {
-        var obj = {};
-        obj[indeces[0]] = 0;
-        matches.push(obj);
+        matches[indeces[0]] = 0;
       }
     
       indeces = [];
     }
+    console.log(matches);
     return matches;
   }
 
@@ -339,6 +478,7 @@ var neutralsIndex = {
 
     var matchCheck = compareObjects(neutralIndexPairs, colorIndexPairs);
     console.log(matchCheck);
+    return matchCheck;
   };
 
 
