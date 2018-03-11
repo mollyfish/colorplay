@@ -170,6 +170,55 @@ var neutralsIndex = {
     var neutralCheck = checkForNeutralPairs();
     var colorsByBlock = mapBlocksByColorName();
 
+    // white center
+    var neutralCheck = {
+      Apricot:1,
+      Autumn:1,
+      Baltic:1,
+      Brass:0,
+      Cactus:1,
+      Cadet:1,
+      Canyon:1,
+      Chartreuse:1,
+      Cherry:1,
+      Clay:1,
+      Cosmic_Blue:1,
+      Denim:1,
+      Flamingo:1,
+      Freedom_Blue:1,
+      Garden:1,
+      Jade:1,
+      Kumquat:1,
+      Licorice:1,
+      Light_Jade:1,
+      Macaw:1,
+      Mango:1,
+      Meadow:1,
+      Mesa:1,
+      Mineral:1,
+      Olive:1,
+      Orange:1,
+      Petunia:1,
+      Pomegranate:1,
+      Reef:1,
+      Royal:1,
+      Saffron:1,
+      Sap:1,
+      Seaweed:1,
+      Serpent:1,
+      Shadow:0,
+      Sky:1,
+      Solar:1,
+      Sunset:1,
+      Tart:1,
+      Terra:1,
+      Thistle:1,
+      Tropical:1,
+      Velvet:1
+    }
+
+
+    // colored center
     // var neutralCheck = {
     //   Asparagus:1,
     //   Autumn:0,
@@ -215,6 +264,92 @@ var neutralsIndex = {
     //   Vino:1
     // }
 
+    // white center
+    var colorsByBlock = [   
+      {outer: "Terra", inner: "Mist", neutral: "Mist", color: "Terra"},
+      {outer: "Shell", inner: "Chartreuse", neutral: "Shell", color: "Chartreuse"},
+      {outer: "Sap", inner: "Mist", neutral: "Mist", color: "Sap"},
+      {outer: "Shell", inner: "Macaw", neutral: "Shell", color: "Macaw"},
+      {outer: "Jade", inner: "Mist", neutral: "Mist", color: "Jade"},
+      {outer: "Baltic", inner: "Mist", neutral: "Mist", color: "Baltic"},
+      {outer: "Chamois", inner: "Serpent", neutral: "Chamois", color: "Serpent"},
+      {outer: "Apricot", inner: "Mist", neutral: "Mist", color: "Apricot"},
+      {outer: "Mist", inner: "Mango", neutral: "Mist", color: "Mango"},
+      {outer: "Licorice", inner: "Shell", neutral: "Shell", color: "Licorice"},
+      {outer: "Mist", inner: "Saffron", neutral: "Mist", color: "Saffron"},
+      {outer: "Solar", inner: "Mist", neutral: "Mist", color: "Solar"},
+      {outer: "Mist", inner: "Light_Jade", neutral: "Mist", color: "Light_Jade"},
+      {outer: "Cactus", inner: "Mist", neutral: "Mist", color: "Cactus"},
+      {outer: "Mist", inner: "Clay", neutral: "Mist", color: "Clay"},
+      {outer: "Mist", inner: "Thistle", neutral: "Mist", color: "Thistle"},
+      {outer: "Freedom_Blue", inner: "Shell", neutral: "Shell", color: "Freedom_Blue"},
+      {outer: "Mist", inner: "Cosmic_Blue", neutral: "Mist", color: "Cosmic_Blue"},
+      {outer: "Mesa", inner: "Mist", neutral: "Mist", color: "Mesa"},
+      {outer: "Mist", inner: "Kumquat", neutral: "Mist", color: "Kumquat"},
+      {outer: "Orange", inner: "Chamois", neutral: "Chamois", color: "Orange"},
+      {outer: "Mist", inner: "Reef", neutral: "Mist", color: "Reef"},
+      {outer: "Sky", inner: "Mist", neutral: "Mist", color: "Sky"},
+      {outer: "Chamois", inner: "Cherry", neutral: "Chamois", color: "Cherry"},
+      {outer: "Canyon", inner: "Fern", neutral: "Fern", color: "Canyon"},
+      {outer: "Tart", inner: "Rugby", neutral: "Rugby", color: "Tart"},
+      {outer: "Mist", inner: "Petunia", neutral: "Mist", color: "Petunia"},
+      {outer: "Royal", inner: "Mist", neutral: "Mist", color: "Royal"},
+      {outer: "Mist", inner: "Mineral", neutral: "Mist", color: "Mineral"},
+      {outer: "Sunset", inner: "Shell", neutral: "Shell", color: "Sunset"},
+      {outer: "Mist", inner: "Seaweed", neutral: "Mist", color: "Seaweed"},
+      {outer: "Cadet", inner: "Mist", neutral: "Mist", color: "Cadet"},
+      {outer: "Shell", inner: "Tropical", neutral: "Shell", color: "Tropical"},
+      {outer: "Pomegranate", inner: "Evergreen", neutral: "Evergreen", color: "Pomegranate"},
+      {outer: "Olive", inner: "Mist", neutral: "Mist", color: "Olive"},
+      {outer: "Garden", inner: "Chamois", neutral: "Chamois", color: "Garden"},
+      {outer: "Flamingo", inner: "Jungle", neutral: "Jungle", color: "Flamingo"},
+      {outer: "Mist", inner: "Autumn", neutral: "Mist", color: "Autumn"},
+      {outer: "Velvet", inner: "Mist", neutral: "Mist", color: "Velvet"},
+      {outer: "Chamois", inner: "Denim", neutral: "Chamois", color: "Denim"},
+      {outer: "Chamois", inner: "Denim", neutral: "Chamois", color: "Denim"},
+      {outer: "Velvet", inner: "Mist", neutral: "Mist", color: "Velvet"},
+      {outer: "Mist", inner: "Autumn", neutral: "Mist", color: "Autumn"},
+      {outer: "Flamingo", inner: "Jungle", neutral: "Jungle", color: "Flamingo"},
+      {outer: "Garden", inner: "Chamois", neutral: "Chamois", color: "Garden"},
+      {outer: "Olive", inner: "Mist", neutral: "Mist", color: "Olive"},
+      {outer: "Pomegranate", inner: "Evergreen", neutral: "Evergreen", color: "Pomegranate"},
+      {outer: "Shell", inner: "Tropical", neutral: "Shell", color: "Tropical"},
+      {outer: "Cadet", inner: "Mist", neutral: "Mist", color: "Cadet"},
+      {outer: "Mist", inner: "Seaweed", neutral: "Mist", color: "Seaweed"},
+      {outer: "Sunset", inner: "Shell", neutral: "Shell", color: "Sunset"},
+      {outer: "Mist", inner: "Mineral", neutral: "Mist", color: "Mineral"},
+      {outer: "Royal", inner: "Mist", neutral: "Mist", color: "Royal"},
+      {outer: "Mist", inner: "Petunia", neutral: "Mist", color: "Petunia"},
+      {outer: "Tart", inner: "Rugby", neutral: "Rugby", color: "Tart"},
+      {outer: "Canyon", inner: "Fern", neutral: "Fern", color: "Canyon"},
+      {outer: "Chamois", inner: "Cherry", neutral: "Chamois", color: "Cherry"},
+      {outer: "Sky", inner: "Mist", neutral: "Mist", color: "Sky"},
+      {outer: "Mist", inner: "Reef", neutral: "Mist", color: "Reef"},
+      {outer: "Orange", inner: "Chamois", neutral: "Chamois", color: "Orange"},
+      {outer: "Mist", inner: "Kumquat", neutral: "Mist", color: "Kumquat"},
+      {outer: "Mesa", inner: "Mist", neutral: "Mist", color: "Mesa"},
+      {outer: "Mist", inner: "Cosmic_Blue", neutral: "Mist", color: "Cosmic_Blue"},
+      {outer: "Freedom_Blue", inner: "Shell", neutral: "Shell", color: "Freedom_Blue"},
+      {outer: "Mist", inner: "Thistle", neutral: "Mist", color: "Thistle"},
+      {outer: "Mist", inner: "Clay", neutral: "Mist", color: "Clay"},
+      {outer: "Cactus", inner: "Mist", neutral: "Mist", color: "Cactus"},
+      {outer: "Mist", inner: "Light_Jade", neutral: "Mist", color: "Light_Jade"},
+      {outer: "Solar", inner: "Mist", neutral: "Mist", color: "Solar"},
+      {outer: "Mist", inner: "Saffron", neutral: "Mist", color: "Saffron"},
+      {outer: "Licorice", inner: "Shell", neutral: "Shell", color: "Licorice"},
+      {outer: "Mist", inner: "Mango", neutral: "Mist", color: "Mango"},
+      {outer: "Apricot", inner: "Mist", neutral: "Mist", color: "Apricot"},
+      {outer: "Chamois", inner: "Serpent", neutral: "Chamois", color: "Serpent"},
+      {outer: "Baltic", inner: "Mist", neutral: "Mist", color: "Baltic"},
+      {outer: "Jade", inner: "Mist", neutral: "Mist", color: "Jade"},
+      {outer: "Shell", inner: "Macaw", neutral: "Shell", color: "Macaw"},
+      {outer: "Sap", inner: "Mist", neutral: "Mist", color: "Sap"},
+      {outer: "Shell", inner: "Chartreuse", neutral: "Shell", color: "Chartreuse"},
+      {outer: "Terra", inner: "Mist", neutral: "Mist", color: "Terra"}
+    ]
+
+
+    // colored center
     // var colorsByBlock = [
     //   {outer: "Licorice", inner: "Mist", neutral: "Mist", color: "Licorice"},
     //   {outer: "Mist", inner: "Slate_gray", neutral: "Mist", color: "Slate_gray"},
@@ -298,8 +433,8 @@ var neutralsIndex = {
     //   {outer: "Licorice", inner: "Mist", neutral: "Mist", color: "Licorice"}
     // ]
 
-    // console.log(colorsByBlock);
-    // console.log(neutralCheck);
+    console.log(colorsByBlock);
+    console.log(neutralCheck);
     var asterisk = "";
     var misMatches;
     for (var i = 0; i < colorsByBlock.length; i++) {
@@ -420,11 +555,56 @@ var neutralsIndex = {
     logColors();
     var colorsByBlock = mapBlocksByColorName();
     
-    var colorIndexPairs = getArrayDuplicates(colorsByBlock, "color");
+    // var colorIndexPairs = getArrayDuplicates(colorsByBlock, "color");
     // console.log(colorIndexPairs);
-    var neutralIndexPairs = getArrayDuplicates(colorsByBlock, "neutral");
+    // var neutralIndexPairs = getArrayDuplicates(colorsByBlock, "neutral");
     // console.log(neutralIndexPairs);
 
+    // white center
+    var colorIndexPairs = {
+      Apricot: [7, 72],
+      Autumn: [37, 42],
+      Baltic: [5, 74],
+      Cactus: [13, 66],
+      Cadet: [31, 48],
+      Canyon: [24, 55],
+      Chartreuse: [1, 78],
+      Cherry: [23, 56],
+      Clay: [14, 65],
+      Cosmic_Blue: [17, 62],
+      Denim: [39, 40],
+      Flamingo: [36, 43],
+      Freedom_Blue: [16, 63],
+      Garden: [35, 44],
+      Jade: [4, 75],
+      Kumquat: [19, 60],
+      Licorice: [9, 70],
+      Light_Jade: [12, 67],
+      Macaw: [3, 76],
+      Mango: [8, 71],
+      Mesa: [18, 61],
+      Mineral: [28, 51],
+      Olive: [34, 45],
+      Orange: [20, 59],
+      Petunia: [26, 53],
+      Pomegranate: [33, 46],
+      Reef: [21, 58],
+      Royal: [27, 52],
+      Saffron: [10, 69],
+      Sap: [2, 77],
+      Seaweed: [30, 49],
+      Serpent: [6, 73],
+      Sky: [22, 57],
+      Solar: [11, 68],
+      Sunset: [29, 50],
+      Tart: [25, 54],
+      Terra: [0, 79],
+      Thistle: [15, 64],
+      Tropical: [32, 47],
+      Velvet: [38, 41]
+    }
+
+    // colored center
     // var colorIndexPairs = {
     //   Apricot: [23, 56],
     //   Asparagus: [4, 75],
@@ -470,6 +650,19 @@ var neutralsIndex = {
     //   Vino: [0, 79],
     // }
 
+    // white center
+    var neutralIndexPairs = {
+      Chamois:[6, 20, 23, 35, 39, 40, 44, 56, 59, 73],
+      Evergreen:[33, 46],
+      Fern:[24, 55],
+      Jungle:[36, 43],
+      Mist:[0, 2, 4, 5, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21, 22, 26, 27, 28, 30, 31, 34, 37, 38, 41, 42, 45, 48, 49, 51, 52, 53, 57, 58, 60, 61, 62, 64, 65, 66, 67, 68, 69, 71, 72, 74, 75, 77, 79],
+      Rugby:[25, 54],
+      Shell:[1, 3, 9, 16, 29, 32, 47, 50, 63, 70, 76, 78]
+    }
+
+
+    // colored center
     // var neutralIndexPairs = {
     //   Chamois:[11, 29, 50, 68],
     //   Mist:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 56, 57, 58, 59, 60, 61, 62, 64, 65, 66, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79],
